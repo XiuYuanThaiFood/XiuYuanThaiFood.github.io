@@ -3,29 +3,46 @@
 body {
     background-color: #f5f0e1;
 }
-.top {
-    display: flex;
-    position: relative;
-}
 
 div {
     
     
 }
-div p {
-    color: #ffffff;
-    
-    justify-self: center;
-    padding: 10px;
-    background-color: #D6AC8080;
-    font-family: Calibri;
+
+.top {
+    display: flex;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    align-items: center;
+    justify-content: center;
 }
+
 
 div img {
     width: 1200px;
-    height: 700px;
+    height: 750px;
     
 }
+
+div h4 {
+    color: #ffffff;
+    padding: 10px;
+    background-color: #D6AC8080;
+    font-family: Calibri;
+    position: absolute;
+    letter-spacing: 0.1em;
+}
+
+div h1 {
+    position: absolute;
+    color: #ffffff;
+    font-family: HG行書体;
+    bottom: 100px;
+    text-shadow: 2px 2px 5px #595959;
+}
+
+
 
 
 
