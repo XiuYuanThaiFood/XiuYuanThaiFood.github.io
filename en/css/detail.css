@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body {
+	background-color: #f5f0e1;
+}
+.top {
+	display: flex;
+	position: relative;
+}
+
+div img {
+	width: 1200px;
+	height: 700px;
+}
+
+.customize_notice {
+	position: relative;
+	display: block;
+	align-items: left;
+}
+
+.customize_notice .opt:nth-child(odd) {
+	font-size: larger;
+	font-weight: bold;
+}
+.customize_notice .opt:nth-child(even) {
+	color: #666;
+}
