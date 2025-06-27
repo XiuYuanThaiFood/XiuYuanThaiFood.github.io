@@ -18,6 +18,9 @@ div img {
 	display: block;
 	align-items: left;
 }
+.customize_notice .opt {
+	position: relative;
+}
 
 .customize_notice .opt:nth-child(odd) {
 	font-size: larger;
