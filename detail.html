@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>XiuYuanThaiFood</title>
-		<link rel="stylesheet" href="../css/detail.css" />
-	</head>
-	<body>
-		<div class="customize_notice">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>XiuYuanThaiFood</title>
+	<link rel="stylesheet" href="../css/detail.css" />
+</head>
+
+<body>
+	<header><br /><br /><br /><br /></header>
+	<!--仮置き-->
+	<main>
+		<div class="customize_notice"><!--rice list-->
+			<h2 class="category">Rice & Noddle</h2>
 			<p class="opt">Vegetarian?</p>
 			<p class="opt">Just let us know and we'll offer special options.</p>
 			<p class="opt">Need softer dishes?</p>
@@ -15,18 +21,101 @@
 				we can adjust texture for elderly or those with chewing difficulties.
 			</p>
 		</div>
-	</body>
+		<div class="category-preview">
+			<div class="preview-img"> <img src="">
+				<div class="img-description">Pad Krapow Pork over
+					Rice</div>
+			</div>
 
-	<script>
-		window.addEventListener("DOMContentLoaded", () => {
-			const noticeDivs = document.querySelectorAll(".customize_notice");
-			noticeDivs.forEach((div, l) => {
-				const items = div.querySelectorAll(".opt");
-				items.forEach((el, i) => {
-					el.style.left = `${i * 5}rem`;
-				});
+			<div class="customize_info">
+				<p class="head">Spice levels customizable:</p>
+				<p class="with-description ">None:<img src="<!--モノクロのチリ-->"></img></p>
+				<p class="description">Ideal for those who can't handle any heat.</p>
+				<p class="with-description ">Mild:<img src="<!--1個-->"></img></p>
+				<p class="description">A gentle kick — for those moderate spice lovers.</p>
+				<p class="with-description ">Medium:<img src="<!--2個-->"></img></p>
+				<p class="description">Balanced warmth — perfect for fans of
+					flavorful heat.</p>
+				<p class="with-description ">Hot:<img src="<!--3個-->"></img></p>
+				<p class="description">Bold and spicy — for adventurous spice
+					seekers.</p>
+				<h3>Choice of <u><i>Chicken</i></u> or <i><u>Pork</u></i></h3>
+			</div>
+			<!-- <p>:</p>  								-->
+			<!-- <p class="description"></p>			-->
+		</div>
+		<p class="please-note">※ Please note: Some dishes come with fixed protein and cannot be substituted.
+		</p>
+		<div id="rice-list" class="img-list">
+			<div class="menu-panel"><img src="" width="300px" height="300px">
+				<p>グリッドテスト用</p>
+			</div>
+			<div class="menu-panel"><img src="" width="300px" height="300px">
+				<p>グリッドテスト用</p>
+			</div>
+			<div class="menu-panel"><img src="" width="300px" height="300px">
+				<p>グリッドテスト用</p>
+			</div>
+			<div class="menu-panel"><img src="" width="300px" height="300px">
+				<p>グリッドテスト用</p>
+			</div>
+			<script src="<!--ライス一覧の要素を作成するスクリプトを別途作成、呼ぶ-->" type="module"></script>
+		</div>
+
+
+		<div class="category-preview"><!--noodle list-->
+			<div class="customize_info">
+				<p class="head">Noodle Choice :</p>
+				<p class="description" style="font-weight: bold;">Choose your preferred noodle type</p>
+				<p><span>Rice Noodle </span><span class="description"> (Sen Yai)</span></p>
+				<p><span>Flat Rice Noodles </span><span class="description"> (Sen Yai)</span></p>
+				<p><span>Rice Vermicelli </span><span class="description">(Sen Mee / Rice Sticks)</span></p>
+
+			</div>
+
+			<div class="preview-img"> <img src="">
+			</div>
+
+			<!-- <p>:</p>  								-->
+			<!-- <p class="description"></p>			-->
+		</div>
+
+		<p class="please-note">※ Please note: Some dishes are fixed and cannot be substituted.</p>
+		<div id="noodle-list" class="img-list">
+			<div class="menu-panel"><img src="" width="300px" height="300px">
+				<p>グリッドテスト用</p>
+			</div>
+
+			<script src="<!--ライス一覧の要素を作成するスクリプトを別途作成、呼ぶ-->" type="module"></script>
+		</div>
+		<br>
+		<br>
+		<div class="customize_notice">
+			<h2 class="category">Vegetable Delights
+			</h2>
+			<p class="opt">Vegetarian?</p>
+			<p class="opt">Just let us know and we'll offer special options.</p>
+			<p class="opt">Need softer dishes?</p>
+			<p class="opt">
+				we can adjust texture for elderly or those with chewing difficulties.
+			</p>
+		</div>
+
+
+	</main>
+</body>
+
+<script>
+	window.addEventListener("DOMContentLoaded", () => {
+		const noticeDivs = document.querySelectorAll(".customize_notice");
+		noticeDivs.forEach((div, l) => {
+			const items = div.querySelectorAll(".opt");
+			items.forEach((el, i) => {
+				el.style.left = `${i * 8}rem`;
 			});
 		});
-	</script>
+	});
+</script>
+
 </html>
 <!--ディレクトリ構造変わったから何とかする-->
