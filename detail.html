@@ -13,7 +13,7 @@
 	<!--仮置き-->
 	<main>
 		<div class="customize_notice"><!--rice list-->
-			<h2 class="category">Rice & Noddle</h2>
+			<p class="category">Rice & Noddle</p>
 			<p class="opt">Vegetarian?</p>
 			<p class="opt">Just let us know and we'll offer special options.</p>
 			<p class="opt">Need softer dishes?</p>
@@ -47,19 +47,7 @@
 		<p class="please-note">※ Please note: Some dishes come with fixed protein and cannot be substituted.
 		</p>
 		<div id="rice-list" class="img-list">
-			<div class="menu-panel"><img src="" width="300px" height="300px">
-				<p>グリッドテスト用</p>
-			</div>
-			<div class="menu-panel"><img src="" width="300px" height="300px">
-				<p>グリッドテスト用</p>
-			</div>
-			<div class="menu-panel"><img src="" width="300px" height="300px">
-				<p>グリッドテスト用</p>
-			</div>
-			<div class="menu-panel"><img src="" width="300px" height="300px">
-				<p>グリッドテスト用</p>
-			</div>
-			<script src="<!--ライス一覧の要素を作成するスクリプトを別途作成、呼ぶ-->" type="module"></script>
+			<!--スクリプトで追加-->
 		</div>
 
 
@@ -82,11 +70,8 @@
 
 		<p class="please-note">※ Please note: Some dishes are fixed and cannot be substituted.</p>
 		<div id="noodle-list" class="img-list">
-			<div class="menu-panel"><img src="" width="300px" height="300px">
-				<p>グリッドテスト用</p>
-			</div>
+			<!--scriptで追加-->
 
-			<script src="<!--ライス一覧の要素を作成するスクリプトを別途作成、呼ぶ-->" type="module"></script>
 		</div>
 		<br>
 		<br>
@@ -105,17 +90,7 @@
 	</main>
 </body>
 
-<script>
-	window.addEventListener("DOMContentLoaded", () => {
-		const noticeDivs = document.querySelectorAll(".customize_notice");
-		noticeDivs.forEach((div, l) => {
-			const items = div.querySelectorAll(".opt");
-			items.forEach((el, i) => {
-				el.style.left = `${i * 8}rem`;
-			});
-		});
-	});
-</script>
+<script src="./js/detail/notice-styling.js" type="module"></script>
+<script src="js\detail\listup.js" type="module"></script>
 
 </html>
-<!--ディレクトリ構造変わったから何とかする-->
