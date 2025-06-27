@@ -28,6 +28,7 @@ const DRINK_DIV_ID = "drink-list";
 
 makePanel(RICE_DIV_ID, RICE_MENU_LIST);
 makePanel(NOODLE_DIV_ID, NOODLE_MENU_LIST);
+makePanel(VEGETABLE_DIV_ID, VEGETABLE_MENU_LIST);
 
 function makePanel(ID, array) {
 	array.forEach((menu) => {

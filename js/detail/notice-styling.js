@@ -1,3 +1,5 @@
+//
+
 const noticeDivs = document.querySelectorAll(".customize_notice");
 noticeDivs.forEach((div, l) => {
 	const items = div.querySelectorAll(".opt");

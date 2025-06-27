@@ -6,13 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>XiuYuanThaiFood</title>
 	<link rel="stylesheet" href="../css/detail.css" />
+
 </head>
 
 <body>
 	<header><br /><br /><br /><br /></header>
 	<!--仮置き-->
 	<main>
-		<div class="customize_notice"><!--rice list-->
+		<div class="customize_notice"> <!--rice list-->
 			<p class="category">Rice & Noddle</p>
 			<p class="opt">Vegetarian?</p>
 			<p class="opt">Just let us know and we'll offer special options.</p>
@@ -29,49 +30,54 @@
 
 			<div class="customize_info">
 				<p class="head">Spice levels customizable:</p>
-				<p class="with-description ">None:<img src="<!--モノクロのチリ-->"></img></p>
+				<p class="with-description ">None:
+					<span data-chilli-count="0"></span><!--スクリプトを使用して画像を追加する。data-chilli-countの値をもとにする。0なら黒。-->
+				</p>
 				<p class="description">Ideal for those who can't handle any heat.</p>
-				<p class="with-description ">Mild:<img src="<!--1個-->"></img></p>
+				<p class="with-description ">Mild:
+					<span data-chilli-count="1"></span>
+				</p>
 				<p class="description">A gentle kick — for those moderate spice lovers.</p>
-				<p class="with-description ">Medium:<img src="<!--2個-->"></img></p>
+				<p class="with-description ">Medium:
+					<span data-chilli-count="2"></span>
+				</p>
 				<p class="description">Balanced warmth — perfect for fans of
 					flavorful heat.</p>
-				<p class="with-description ">Hot:<img src="<!--3個-->"></img></p>
+				<p class="with-description ">Hot:
+					<span data-chilli-count="3"></span>
+
+
+				</p>
 				<p class="description">Bold and spicy — for adventurous spice
 					seekers.</p>
 				<h3>Choice of <u><i>Chicken</i></u> or <i><u>Pork</u></i></h3>
 			</div>
-			<!-- <p>:</p>  								-->
-			<!-- <p class="description"></p>			-->
+
 		</div>
 		<p class="please-note">※ Please note: Some dishes come with fixed protein and cannot be substituted.
 		</p>
 		<div id="rice-list" class="img-list">
-			<!--スクリプトで追加-->
+			<!--scriptで追加される-->
 		</div>
 
 
-		<div class="category-preview"><!--noodle list-->
+		<div class="category-preview"> <!--noodle list-->
 			<div class="customize_info">
 				<p class="head">Noodle Choice :</p>
 				<p class="description" style="font-weight: bold;">Choose your preferred noodle type</p>
-				<p><span>Rice Noodle </span><span class="description"> (Sen Yai)</span></p>
-				<p><span>Flat Rice Noodles </span><span class="description"> (Sen Yai)</span></p>
-				<p><span>Rice Vermicelli </span><span class="description">(Sen Mee / Rice Sticks)</span></p>
+				<p><span>Rice Noodle </span><span class="description"> (Sen Yai)</span></p>
+				<p><span>Flat Rice Noodles </span><span class="description"> (Sen Yai)</span></p>
+				<p><span>Rice Vermicelli </span><span class="description">(Sen Mee / Rice Sticks)</span></p>
 
 			</div>
 
 			<div class="preview-img"> <img src="">
 			</div>
-
-			<!-- <p>:</p>  								-->
-			<!-- <p class="description"></p>			-->
 		</div>
 
 		<p class="please-note">※ Please note: Some dishes are fixed and cannot be substituted.</p>
 		<div id="noodle-list" class="img-list">
-			<!--scriptで追加-->
-
+			<!--scriptで追加される-->
 		</div>
 		<br>
 		<br>
@@ -86,11 +92,61 @@
 			</p>
 		</div>
 
+		<div class="category-preview"> <!--vegetable list-->
+			<div class="preview-img"> <img src="">
+				<div class="img-description">Pad Krapow Pork over
+					Rice</div>
+			</div>
 
+			<div class="customize_info">
+				<p class="head">Spice levels customizable:</p>
+				<p class="with-description ">None:<span data-chilli-count="0"></span></p>
+				<p class="description">Ideal for those who can't handle any heat.</p>
+				<p class="with-description ">Mild:<span data-chilli-count="1"></span></p>
+				<p class="description">A gentle kick — for those moderate spice lovers.</p>
+				<p class="with-description ">Medium:<span data-chilli-count="2"></span></p>
+				<p class="description">Balanced warmth — perfect for fans of
+					flavorful heat.</p>
+				<p class="with-description ">Hot:<span data-chilli-count="3"></span></p>
+				<p class="description">Bold and spicy — for adventurous spice
+					seekers.</p>
+				<h3>
+					Veggies:<br>
+					<br>
+					Stir-Fried<img src="<!--野菜マーク-->"><br>
+					Wok-Tossed with Shrimp Paste<img src="<!--エビマーク-->">
+				</h3>
+
+			</div>
+
+
+		</div>
+		<div id="vegitable-list" class="img-list">
+			<!--scriptで追加される。野菜マーク・海老マークのつけ方検討中-->
+		</div>
+		<p class="category">Juices & Drinks</p>
+		<div id="drinks-list" class="img-list">
+			<!--scriptで追加される-->
+		</div>
+		<div class="teptip">
+			<p>Imported from Thailand ─</p>
+			<p>Local Favorite Drinks</p>
+			<img src="<!--teptipの画像-->" width="400" height="400" alt="teptip">
+			<div>
+				<h2>Coconut Juice ─</h2>
+				<p>Sourced from Thailand’s fragrant Nam Hom coconuts; naturally sweet, electrolytic, and refreshing.</p>
+			</div>
+			<div>
+				<h2>Tamarind Juice (Nam Makham) ─</h2>
+				<p>Thailand’s beloved tangy-sweet juice, full of flavor and health benefits.</p>
+			</div>
+		</div>
 	</main>
 </body>
 
 <script src="./js/detail/notice-styling.js" type="module"></script>
-<script src="js\detail\listup.js" type="module"></script>
+<script src="./js/detail/listup.js" type="module"></script>
+<script src="./js/detail/fill-chilli.js" type="module"></script>
+
 
 </html>
