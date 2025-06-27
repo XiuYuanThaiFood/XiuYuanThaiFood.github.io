@@ -133,14 +133,14 @@ span[data-chilli-count] {
 	margin-top: 1rem;
 	padding: 16px;
 	border-radius: 1rem;
-	width: 20rem;
+	width: 30rem;
 }
 .teptip div h2 {
 	margin: 0;
 }
 .teptip :nth-child(1 of div) {
-	left: 10%;
+	left: 0%;
 }
 .teptip :nth-child(2 of div) {
-	left: 30%;
+	left: 15%;
 }
