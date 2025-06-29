@@ -122,7 +122,8 @@ div h1 {
 
 .introduction {
     color: #D6AC80;
-    width: 276px;
+    width: 400px;
+    font-weight: bold;
 }
 
 .weeks-special img {
@@ -140,7 +141,6 @@ div h1 {
 
 .special-menu p {
     color: #f8a300;
-    font-size: 30px;
     font-family: Calibri;
     font-weight: bold;
 }
@@ -148,5 +148,118 @@ div h1 {
 .special-menu > p {
     text-align: center;
     font-size: 50px;
-    margin: 0;
+    margin: 5px;
 }
+
+/* Menu Section */
+.menu-section {
+    background-color: #f5f0e1;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.menu-section h2 {
+    color: #940000;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.menu-carousel-box {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.carousel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #D6AC80;
+}
+
+.carousel.left {
+    left: -115px; 
+}
+
+.carousel.right {
+    right: -115px; 
+}
+
+.menu-box-wrapper {
+    overflow: hidden;
+    border: 7px solid #d6ac80;
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.menu-box-group {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-box {
+    display: flex;
+    width: 50%;
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+#slide1:checked ~ .menu-box-wrapper .menu-box-group {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .menu-box-wrapper .menu-box-group {
+    transform: translateX(-50%);
+}
+
+.back-to-top {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+
+/* Footer */
+.site-footer {
+     text-align: center;
+     font-family: Calibri;
+}
+
+.footer-info {
+    color: #ffffff;
+    background-color: #940000;
+    text-align: left;
+    padding-left: 175px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-right img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-copyright {
+    color: #595959;
+    margin-top: 20px;
+    font-size: 14px;
+    background-color: #f5f0e1;
+}
+
