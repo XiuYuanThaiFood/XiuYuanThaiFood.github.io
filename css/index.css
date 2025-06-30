@@ -226,10 +226,10 @@ input[type="radio"] {
 }
 
 .back-to-top {
-    display: flex;
-    justify-content: flex-end;
+    position: fixed;
     padding-right: 30px;
-    padding-bottom: 10px;
+    bottom: 0;
+    right: 0;
 }
 
 
