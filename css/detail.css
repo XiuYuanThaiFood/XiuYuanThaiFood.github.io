@@ -197,3 +197,7 @@ span[data-chilli-count] {
 .teptip :nth-child(2 of div) {
 	left: 15%;
 }
+svg {
+	stroke: var(--brownColor);
+	fill: var(--brownColor);
+}
