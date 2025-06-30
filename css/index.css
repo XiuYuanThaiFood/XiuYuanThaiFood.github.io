@@ -66,12 +66,12 @@ body {
     color: #ffffff;
 }
 
-div img {
+.wrapper img {
     width: 1200px;
-    height: 750px; 
+    height: 750px;
 }
 
-div h4 {
+.wrapper h4 {
     padding: 10px;
     background-color: #D6AC8080;
     font-family: Calibri;
@@ -79,7 +79,7 @@ div h4 {
     letter-spacing: 0.1em;
 }
 
-div h1 {
+.wrapper h1 {
     position: absolute;
     font-family: HG行書体;
     bottom: 100px;
@@ -181,11 +181,11 @@ input[type="radio"] {
 }
 
 .carousel.left {
-    left: -115px; 
+    left: -115px;
 }
 
 .carousel.right {
-    right: -115px; 
+    right: -115px;
 }
 
 .menu-box-wrapper {
