@@ -1,5 +1,5 @@
 @charset "UTF-8";
-:root {
+html {
 	--brownColor: #d6ac80;
 	--warnRed: #c00000;
 }
@@ -84,6 +84,9 @@ body {
 	width: 50%;
 	align-items: center;
 }
+.preview-img img {
+	height: auto;
+}
 .preview-img .img-description {
 	width: fit-content;
 	padding: 1rem;
@@ -100,6 +103,7 @@ body {
 	gap: 2rem 1rem;
 	margin: 0 5rem 7rem 5rem;
 	grid-template-columns: repeat(3, 1fr);
+	min-height: 381px+7rem;
 }
 .menu-panel {
 	border: 2px solid var(--brownColor);
@@ -108,7 +112,17 @@ body {
 	color: var(--brownColor);
 	position: relative;
 	text-align: center;
-	min-height: 380px;
+	min-height: 381px;
+}
+.menu-panel img {
+	height: auto;
+	margin: 1rem;
+}
+.menu-panel .menu-name {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2rem;
 }
 .optional-info {
 	position: absolute;
@@ -137,12 +151,15 @@ body {
 .teptip img {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 5%;
+	height: auto;
+	transform: rotate(-15deg);
 }
 .teptip > p {
 	position: relative;
-	font-size: larger;
+	font-size: x-large;
 	font-weight: bold;
+	max-width: fit-content;
 }
 
 .teptip > p:first-child {
