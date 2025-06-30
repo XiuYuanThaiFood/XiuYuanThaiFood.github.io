@@ -2,6 +2,7 @@
 html {
 	--brownColor: #d6ac80;
 	--warnRed: #c00000;
+	font-size: 16px;
 }
 img[alt] {
 	color: gray !important;
@@ -37,11 +38,11 @@ body {
 	position: absolute;
 	justify-self: right;
 	right: 0;
-
+	top: 0;
 	margin: 0;
 }
 
-.customize_notice .opt:nth-child(odd of .opt) {
+.customize_notice .opt:nth-child(odd) {
 	font-size: x-large;
 	font-weight: bold;
 }
@@ -53,7 +54,6 @@ body {
 	margin: 1rem 4rem 2rem 4rem;
 }
 .customize_info {
-	/*カテゴリごとのカスタム情報について*/
 	display: inline;
 	background-color: white;
 	border-radius: 3rem;
@@ -100,10 +100,10 @@ body {
 }
 .img-list {
 	display: grid;
-	gap: 2rem 1rem;
+	gap: 2rem;
 	margin: 0 5rem 7rem 5rem;
 	grid-template-columns: repeat(3, 1fr);
-	min-height: 381px+7rem;
+	min-height: calc(381px + 1rem);
 }
 .menu-panel {
 	border: 2px solid var(--brownColor);
@@ -113,8 +113,10 @@ body {
 	position: relative;
 	text-align: center;
 	min-height: 381px;
+	font-size: 1.4rem;
 }
 .menu-panel img {
+	max-width: 100%;
 	height: auto;
 	margin: 1rem;
 }
@@ -122,27 +124,32 @@ body {
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 2rem;
+	top: 17rem;
 }
 .optional-info {
 	position: absolute;
 	inset: 0px;
-	top: 280px;
+	top: 230px;
 }
 .optional--substituted {
 	color: var(--warnRed);
 	font-weight: 400;
-	text-shadow: #6665 0 1px 1px;
+
+	text-shadow: #6665 1px 2px 2px;
 }
 .optional--icons {
 	display: flex;
 	flex-direction: row;
-	gap: 10px;
-	justify-content: center;
+	justify-content: left;
+	margin-left: 2rem;
+}
+.optional--icons img {
+	margin: 0;
 }
 
-.menu-panel span[data-chilli-count] {
-	margin-left: 10px;
+span[data-chilli-count] {
+	position: absolute;
+	left: 60%;
 }
 .teptip {
 	position: relative;
@@ -157,8 +164,9 @@ body {
 }
 .teptip > p {
 	position: relative;
-	font-size: x-large;
-	font-weight: bold;
+	font-size: 2rem;
+	font-weight: 500;
+	margin: 0;
 	max-width: fit-content;
 }
 
@@ -172,12 +180,16 @@ body {
 	background-color: #fbfaf5;
 	position: relative;
 	margin-top: 1rem;
-	padding: 16px;
+	padding: 1rem 1.5rem;
 	border-radius: 1rem;
-	width: 30rem;
+	width: fit-content;
 }
 .teptip div h2 {
 	margin: 0;
+	font-size: 1.8rem;
+}
+.teptip div p {
+	font-size: 1.2em;
 }
 .teptip :nth-child(1 of div) {
 	left: 0%;

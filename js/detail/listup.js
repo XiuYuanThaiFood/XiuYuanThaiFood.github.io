@@ -35,7 +35,7 @@ const RICE_MENU_LIST = [
 	},
 	{
 		imgPath: "./image/detail/rice/hainanese_chicken_rice.webp",
-		name: "Hainanese Chicken Rice (Khao Man Gai)",
+		name: "Hainanese Chicken Rice <br>(Khao Man Gai)",
 		substitute: false,
 	},
 ];
@@ -50,7 +50,7 @@ const NOODLE_MENU_LIST = [
 	},
 	{
 		imgPath: "./image/detail/noodle/IMG_1001.webp",
-		name: "Flat Rice Noodles",
+		name: "",
 		substitute: false,
 	},
 ];
@@ -72,16 +72,18 @@ const VEGETABLE_MENU_LIST = [
 		shrimp: true,
 	},
 ];
-
 const DRINK_MENU_LIST = [
-	{ imgPath: "./", name: "this panel was added dynamically" },
-	{ imgPath: "./", name: "this panel was added dynamically" },
-	{ imgPath: "./", name: "this panel was added dynamically" },
+	{ imgPath: ".image/detail/drink/", name: "this panel was added dynamically" },
+	{ imgPath: ".image/detail/drink/", name: "this panel was added dynamically" },
+	{ imgPath: ".image/detail/drink/", name: "this panel was added dynamically" },
+	{ imgPath: ".image/detail/drink/", name: "this panel was added dynamically" },
+	{ imgPath: ".image/detail/drink/", name: "this panel was added dynamically" },
+	{ imgPath: ".image/detail/drink/", name: "this panel was added dynamically" },
 ];
 
 const MENU_CLASS = "menu-panel";
 const IMG_SIZE = "250";
-const ICON_SIZE = "50";
+const ICON_SIZE = "40";
 const RICE_DIV_ID = "rice-list";
 const NOODLE_DIV_ID = "noodle-list";
 const VEGETABLE_DIV_ID = "vegitable-list";
@@ -102,7 +104,7 @@ function makePanel(ID, array) {
 		img.height = IMG_SIZE;
 		const menuName = document.createElement("p");
 		menuName.classList.add("menu-name");
-		menuName.textContent = menu.name;
+		menuName.innerHTML = menu.name;
 		div.appendChild(img);
 
 		const optDiv = document.createElement("div");
