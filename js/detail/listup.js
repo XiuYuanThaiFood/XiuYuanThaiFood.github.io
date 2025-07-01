@@ -100,6 +100,7 @@ const DRINK_MENU_LIST = [
 ];
 
 const MENU_CLASS = "menu-panel";
+const IMG_CONTAINER_CLASS = "img-container";
 const IMG_SIZE = "250";
 const ICON_SIZE = "40";
 const RICE_DIV_ID = "rice-list";
@@ -117,6 +118,8 @@ function makePanel(ID, array) {
 	array.forEach((menu) => {
 		const div = document.createElement("div");
 		div.classList.add(MENU_CLASS);
+		const containerDiv = document.createElement("div");
+		containerDiv.classList.add(IMG_CONTAINER_CLASS);
 		const img = document.createElement("img");
 		img.src = menu.imgPath;
 		img.width = IMG_SIZE;
@@ -124,7 +127,8 @@ function makePanel(ID, array) {
 		const menuName = document.createElement("p");
 		menuName.classList.add("menu-name");
 		menuName.innerHTML = menu.name;
-		div.appendChild(img);
+		containerDiv.appendChild(img);
+		div.appendChild(containerDiv);
 
 		const optDiv = document.createElement("div");
 		optDiv.classList.add("optional-info");
