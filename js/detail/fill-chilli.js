@@ -1,25 +1,28 @@
 const chilli_spans = document.querySelectorAll("[data-chilli-count]");
 const WIDTH = 25;
 const HEIGHT = 30;
+
+const NOT_SPICY_PATH = "image/detail/hot.svg";
+const SPICY_PATH = "image/detail/redhot.svg";
 chilli_spans.forEach((s) => {
 	const count = s.dataset.chilliCount;
 	if (isNaN(count)) {
-		s.innerHTML = "変な値が入ってます";
-	} else if (+count === 0) {
-		s.innerHTML =
-			'<img src="image/detail/hot.webp" alt="" width="' +
-			WIDTH +
-			'" height="' +
-			HEIGHT +
-			'">';
+		const text = document.createTextNode("invalid value in chilliCount");
+		s.appendChild(text);
 	} else {
-		for (let i = 0; i < count; i++) {
-			s.innerHTML +=
-				'<img src="image/detail/redhot.webp" alt="" width="' +
-				WIDTH +
-				'" height="' +
-				HEIGHT +
-				'">';
+		const img = document.createElement("img");
+		img.width = WIDTH;
+		img.height = HEIGHT;
+		img.alt = "";
+		if (+count === 0) {
+			img.src = NOT_SPICY_PATH;
+			s.appendChild(img);
+		} else {
+			img.src = SPICY_PATH;
+			for (let i = 1; i < count; i++) {
+				s.appendChild(img.cloneNode());
+			}
+			s.appendChild(img);
 		}
 	}
 });

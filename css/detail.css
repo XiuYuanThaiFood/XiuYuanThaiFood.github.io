@@ -65,6 +65,13 @@ body {
 .customize_info .description {
 	margin: 0;
 }
+.with-description {
+	display: flex;
+	flex-direction: row;
+}
+.with-description .spice-level {
+	width: 5rem;
+}
 .customize_info *:not(.description) {
 	color: darkslateblue;
 	font-weight: bold;
@@ -147,10 +154,6 @@ body {
 	margin: 0;
 }
 
-span[data-chilli-count] {
-	position: absolute;
-	left: 60%;
-}
 .teptip {
 	position: relative;
 	color: var(--brownColor);
