@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: right;
 }
+
 .site-nav ul {
     list-style: none;
     display: flex;
@@ -54,7 +55,6 @@ body {
 .site-nav li {
     text-align: center;
 }
-
 
 /* Footer */
 .site-footer {
@@ -92,10 +92,6 @@ body {
     background-color: #f5f0e1;
 }
 
-.about {
-
-}
-
 .section-title {
     color: #940000;
     font-family: Calibri;
@@ -131,9 +127,11 @@ body {
 .about-logo img {
     width: 320px;
 }
+
 .about-detail {
     margin-left: 100px;
 }
+
 .about-detail p {
     color: #f5f0e1;
     font-family: Calibri;
