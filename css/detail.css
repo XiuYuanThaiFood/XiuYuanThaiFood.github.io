@@ -62,6 +62,7 @@ body {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
+	margin-bottom: 4rem;
 
 }
 
@@ -118,6 +119,7 @@ body {
 }
 
 .preview-img img {
+	max-width: 500px;
 	width: 100%;
 	height: auto;
 
@@ -225,11 +227,12 @@ body {
 	right: 5%;
 	height: auto;
 	transform: rotate(-15deg);
+	margin: 2rem auto;
 }
 
 .teptip>p {
 	position: relative;
-	font-size: 2rem;
+	font-size: 2em;
 	font-weight: 500;
 	margin: 0;
 	max-width: fit-content;
@@ -246,15 +249,15 @@ body {
 .teptip div {
 	background-color: #fbfaf5;
 	position: relative;
-	margin-top: 1rem;
-	padding: 1rem 1.5rem;
-	border-radius: 1rem;
+	margin-top: 1em;
+	padding: 1em 1.5em;
+	border-radius: 1em;
 	width: fit-content;
 }
 
 .teptip div h2 {
 	margin: 0;
-	font-size: 1.8rem;
+	font-size: 1.8em;
 }
 
 .teptip div p {
@@ -283,5 +286,24 @@ svg {
 
 	.customize_notice--text {
 		transform: 0;
+	}
+
+	.teptip {
+		font-size: 12px;
+	}
+
+	.teptip :not(img) {
+		transform: none;
+		left: 0 !important;
+	}
+
+	.teptip img {
+		position: static;
+		display: block;
+		transform: none;
+		align-self: center;
+		width: 70%;
+		height: auto;
+
 	}
 }
