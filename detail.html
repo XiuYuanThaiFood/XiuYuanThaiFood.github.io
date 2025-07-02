@@ -11,79 +11,89 @@
 
 
 <body>
-	<!--カテゴリーIDつけとく-->
 	<header><br /><br /><br /><br /></header><!--要置き換え-->
 	<main>
-		<div class="customize_notice"> <!--rice list-->
+		<div class="category-section rice-and-noodle" id="rice-and-noodle">
+			<h2>──<span class="category">Rice</span> & Noddle</h2>
+			<div class="customize_segment">
+				<div class="customize_option">
+					<p class="head">Spice levels customizable:</p>
+					<p class="with-description ">
+						<span class="spice-level">None:</span>
+						<img src="" width="" height="" alt="none">
+					</p>
+					<p class="description">Ideal for those who can't handle any heat.</p>
+					<p class="with-description ">
+						<span class="spice-level">Mild:</span>
+						<img src="" width="" height="" alt="mild">
+					</p>
+					<p class="description">A gentle kick — for those moderate spice lovers.</p>
+					<p class="with-description ">
+						<span class="spice-level">Medium:</span>
+						<img src="" width="" height="" alt="medium">
+					</p>
+					<p class="description">Balanced warmth — perfect for fans of
+						flavorful heat.</p>
+					<p class="with-description ">
+						<span class="spice-level">Hot:</span>
+						<img src="" width="" height="" alt="hot">
+					</p>
+					<p class="description">Bold and spicy — for adventurous spice
+						seekers.</p>
+				</div>
+				<div class="sub-custimize-block">
+					<div class="customize_option">
+						<p class="head">Need softer dishes?</p>
+						<p class="description">We can adjust texture for elderly or those with chewing difficulties.</p>
+					</div>
+					<div class="customize_option">
+						<p class="head">Choice of Meat
+							<img src="" width="" height="" alt="include meat">
+							or
+							<img src="" width="" height="" alt="exclude meat">
+						</p>
+					</div>
+					<p class="please-note">※If you have any food allergies,<br>please inform our staff.</p>
+				</div>
+			</div>
+			<div class="category-typical-menu">
+				<div class="typical-img">
+					<img src="image\detail\rice\pad_krapow_pork_over_rice.webp" width="500" height="368" alt="画像"
+						style="transform:rotate(5deg)" fetchpriority="high">
+				</div>
 
-			<p class="customize_notice--text">Vegetarian?</p>
-			<p class="customize_notice--text">Just let us know and we'll offer special options.</p>
-			<p class="customize_notice--text">Need softer dishes?</p>
-			<p class="customize_notice--text">
-				we can adjust texture for elderly or those with chewing difficulties.
+				<div class>
+					<p class="typical-menu--name">Pad Krapow Pork over Rice</p>
+					<img src="" width="" height="" alt="badge">
+					<p class="typical-menu--description">Spicy stir‑fried minced pork with garlic, chili & holy basil,
+						served over rice.juicy and aromatic.</p>
+					<p class="typical-menu--price">TW$120</p>
+				</div>
+			</div>
+			<p class="please-note">※Image for reference only - final presentation may vary.
+			<p class="please-note">※Some dishes come with fixed protein and cannot be substituted.(<img src="" width=""
+					height="" alt="can't be substituted icon">)
 			</p>
-			<p class="category" id="rice-and-noodle">Rice & Noddle</p>
-		</div>
-		<div class="category-preview">
-			<div class="preview-img"> <img src="image\detail\rice\pad_krapow_pork_over_rice.webp" width="500"
-					height="368" alt="画像" style="transform:rotate(5deg)" fetchpriority="high">
-				<div class="img-description">Pad Krapow Pork over
-					Rice</div>
+			<div id="rice-list" class="img-list">
+				<!--scriptで追加される-->
 			</div>
-
-			<div class="customize_info">
-				<p class="head">Spice levels customizable:</p>
-				<p class="with-description "><span class="spice-level">None:</span>
-					<span data-chilli-count="0"></span><!--スクリプトを使用して画像を追加する。data-chilli-countの値をもとにする。0なら黒。-->
-				</p>
-				<p class="description">Ideal for those who can't handle any heat.</p>
-				<p class="with-description ">
-					<span class="spice-level">Mild:</span>
-					<span data-chilli-count="1"></span>
-				</p>
-				<p class="description">A gentle kick — for those moderate spice lovers.</p>
-				<p class="with-description "><span class="spice-level">Medium:</span>
-					<span data-chilli-count="2"></span>
-				</p>
-				<p class="description">Balanced warmth — perfect for fans of
-					flavorful heat.</p>
-				<p class="with-description "><span class="spice-level">Hot:</span>
-					<span data-chilli-count="3"></span>
-
-
-				</p>
-				<p class="description">Bold and spicy — for adventurous spice
-					seekers.</p>
-				<h2>Choice of <u><i>Chicken</i></u> or <i><u>Pork</u></i></h2>
+			<div class="category-preview"> <!--noodle list-->
+				<div class="customize_option">
+					<p class="head">Noodle Choice :</p>
+					<p class="description" style="font-weight: bold;">Choose your preferred noodle type</p>
+					<p><span>Rice Noodle </span><span class="description"> (Sen Yai)</span></p>
+					<p><span>Flat Rice Noodles </span><span class="description"> (Sen Yai)</span></p>
+					<p><span>Rice Vermicelli </span><span class="description">(Sen Mee / Rice Sticks)</span></p>
+				</div>
+				<div class="preview-img"><img src="image/detail/noodle/IMG_1002.webp" width="500" height="368"
+						style="transform:rotate(-10deg)" alt="画像">
+					<div class="img-description">Tom Yom seafood soupnoddle</div>
+				</div>
 			</div>
-
-		</div>
-		<p class="please-note">※ Please note: Some dishes come with fixed protein and cannot be substituted.
-		</p>
-		<div id="rice-list" class="img-list">
-			<!--scriptで追加される-->
-		</div>
-
-
-		<div class="category-preview"> <!--noodle list-->
-			<div class="customize_info">
-				<p class="head">Noodle Choice :</p>
-				<p class="description" style="font-weight: bold;">Choose your preferred noodle type</p>
-				<p><span>Rice Noodle </span><span class="description"> (Sen Yai)</span></p>
-				<p><span>Flat Rice Noodles </span><span class="description"> (Sen Yai)</span></p>
-				<p><span>Rice Vermicelli </span><span class="description">(Sen Mee / Rice Sticks)</span></p>
-
+			<p class=" please-note">※ Please note: Some dishes are fixed and cannot be substituted.</p>
+			<div id="noodle-list" class="img-list">
+				<!--scriptで追加される-->
 			</div>
-
-			<div class="preview-img"><img src="image/detail/noodle/IMG_1002.webp" width="500" height="368"
-					style="transform:rotate(-10deg)" alt="画像">
-				<div class="img-description">Tom Yom seafood soupnoddle</div>
-			</div>
-		</div>
-
-		<p class=" please-note">※ Please note: Some dishes are fixed and cannot be substituted.</p>
-		<div id="noodle-list" class="img-list">
-			<!--scriptで追加される-->
 		</div>
 		<br>
 		<br>
@@ -95,17 +105,17 @@
 			<p class="customize_notice--text">
 				we can adjust texture for elderly or those with chewing difficulties.
 			</p>
-			<h2 class="category" id="vegetable-delights">Vegetable Delights
-			</h2>
-		</div>
 
+		</div>
+		<h2 class="category" id="vegetable-delights">Vegetable Delights
+		</h2>
 		<div class="category-preview"> <!--vegetable list-->
 			<div class="preview-img">
 				<img src="./image/detail/vegetable/IMG_1022.webp" width="500" height="358" alt="画像">
 				<div class="img-description">Som Tam</div>
 			</div>
 
-			<div class="customize_info">
+			<div class="customize_option">
 				<p class="head">Spice levels customizable:</p>
 				<p class="with-description "><span class="spice-level">None:</span><span data-chilli-count="0"></span>
 				</p>
@@ -144,13 +154,13 @@
 			<p>Local Favorite Drinks</p>
 			<img src="image/detail/teptip.webp" width="400" height="400" alt="teptip">
 			<div>
-				<h2>Coconut Juice ─</h2>
+				<p class="teptip-desc">Coconut Juice ─</p>
 				<p>Sourced from Thailand’s fragrant Nam Hom coconuts; <br>naturally sweet, electrolytic, and
 					refreshing.
 				</p>
 			</div>
 			<div>
-				<h2>Tamarind Juice (Nam Makham) ─</h2>
+				<p class="teptip-desc">Tamarind Juice (Nam Makham) ─</p>
 				<p>Thailand’s beloved tangy-sweet juice,<br>full of flavor and health benefits.</p>
 			</div>
 		</div>
