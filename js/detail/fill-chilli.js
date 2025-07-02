@@ -14,6 +14,7 @@ chilli_spans.forEach((s) => {
 		img.width = WIDTH;
 		img.height = HEIGHT;
 		img.alt = "";
+		img.className = "chilli-img";
 		if (+count === 0) {
 			img.src = NOT_SPICY_PATH;
 			s.appendChild(img);
