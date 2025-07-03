@@ -311,7 +311,114 @@ svg {
 	fill: var(--panel-border);
 }
 
+.hide-modal {
+	display: none;
+}
 
+.modal {
+	position: fixed;
+	inset: 0;
+	margin: auto;
+	width: 45rem;
+	height: 30rem;
+	background-color: #FFFFFFF5;
+	border: var(--main-color) 3px solid;
+	border-radius: 10px;
+	box-sizing: border-box;
+
+}
+
+.modal p {
+	margin: 0;
+}
+
+.modal-contents {
+	position: relative;
+	padding-left: 2rem;
+	box-sizing: border-box;
+	height: stretch;
+	width: stretch;
+}
+
+.modal-title {
+	position: absolute;
+	top: 5%;
+	max-width: 50%;
+	font-size: 1.8rem;
+
+	font-weight: bold;
+}
+
+.modal-price {
+	position: absolute;
+	top: 40%;
+	background-color: var(--main-color);
+	color: white;
+	width: fit-content;
+	box-sizing: border-box;
+	padding: 0.1rem 0.4rem;
+}
+
+.modal-description {
+	position: absolute;
+	top: 50%;
+	max-height: 20%;
+
+}
+
+.ingredients {
+	position: absolute;
+	bottom: 7%;
+	display: flex;
+	width: stretch;
+	flex-direction: row;
+	gap: 2rem;
+	align-items: center;
+}
+
+.ingredients img {
+	width: 10%;
+	height: auto;
+	aspect-ratio: auto;
+
+}
+
+.key-ingredients {
+	width: 30%;
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+.ingredients-field {
+	width: 60%;
+
+}
+
+.modal-img-container {
+	position: absolute;
+	inset: 1rem 10% 30% 50%;
+	max-width: 50%;
+}
+
+.modal-img-container img {
+	max-width: 100%;
+	inset: 0;
+	margin: auto;
+	width: stretch;
+	object-position: center;
+	aspect-ratio: auto;
+
+}
+
+.hide-button {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+.hide-button:hover {
+	cursor: pointer;
+}
 
 @media screen and (max-width:480px) {
 	.category-preview {

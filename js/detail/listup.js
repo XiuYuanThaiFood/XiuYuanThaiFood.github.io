@@ -2,40 +2,49 @@ const RICE_MENU_LIST = [
 	{
 		imgPath: "./image/detail/rice/seafood_curry_fried_rice.webp",
 		name: "Seafood Curry Fried Rice",
+		price: 120,
 	},
 	{
 		imgPath: "./image/detail/rice/pork_fried_rice_with_egg.webp",
 		name: "Pork Fried Rice with Egg",
+		price: 110,
 	},
 	{
 		imgPath: "./image/detail/rice/chicken_fried_rice_with_egg.webp",
 		name: "Chicken Fried Rice with Egg",
+		price: 110,
 	},
 	{
 		imgPath: "./image/detail/rice/shrimp_paste_fried_rice.webp",
 		name: "Shrimp Paste Fried Rice",
+		price: 150,
 	},
 	{
 		imgPath:
 			"./image/detail/rice/stir-fried_chinese_broccoli_with_chicken.webp",
 		name: "Stir-fried Shinese Broccoli with Chicken",
+		price: 110,
 	},
 	{
 		imgPath:
 			"./image/detail/rice/stir-fried_cabbage_with_chicken_over_rice.webp",
 		name: "Stir-Fried Cabbage with Chicken over Rice",
+		price: 110,
 	},
 	{
 		imgPath: "./image/detail/rice/coconut_milk_chicken_over_rice.webp",
 		name: "Coconut Milk Chicken over Rice",
+		price: 120,
 	},
 	{
 		imgPath: "./image/detail/rice/thai_yellow_chicken_curry_over_rice.webp",
 		name: "Thai Yellow Chicken Curry over Rice",
+		price: 140,
 	},
 	{
 		imgPath: "./image/detail/rice/hainanese_chicken_rice.webp",
 		name: "Hainanese Chicken Rice <br>(Khao Man Gai)",
+		price: 130,
 		substitute: false,
 	},
 ];
@@ -157,7 +166,7 @@ function makePanel(ID, array) {
 
 		const menuPrice = document.createElement("p");
 		menuPrice.classList.add(MENU_PRICE_CLASS);
-
+		menuPrice.textContent = menu.price;
 		mainInfoDiv.appendChild(menuName);
 		mainInfoDiv.appendChild(menuPrice);
 		panelDiv.appendChild(mainInfoDiv);
@@ -185,9 +194,11 @@ function makePanel(ID, array) {
 			iconDiv.appendChild(noShrimpIcon);
 		}
 		panelDiv.appendChild(iconDiv);
-		panelDiv.addEventListener("click", function () {
-			console.log("clicked:" + `${ID}→${index}.${menu.name}`);
-		});
+		if (ID != DRINK_DIV_ID) {
+			panelDiv.addEventListener("click", function () {
+				showModal(ID, menu);
+			});
+		}
 		document.getElementById(ID).appendChild(panelDiv);
 	});
 }
