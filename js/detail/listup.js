@@ -62,13 +62,11 @@ const VEGETABLE_MENU_LIST = [
 	{
 		imgPath: "./image/detail/vegetable/IMG_1019.webp",
 		name: "Stir‑fried water spinach/with shrimp paste",
-		stirFried: true,
 		shrimp: true,
 	},
 	{
 		imgPath: "./image/detail/vegetable/IMG_1020.webp",
 		name: "Stir‑fried cabbage/with shrimp paste",
-		stirFried: true,
 		shrimp: true,
 	},
 ];
@@ -101,68 +99,95 @@ const DRINK_MENU_LIST = [
 
 const MENU_CLASS = "menu-panel";
 const IMG_CONTAINER_CLASS = "img-container";
+const MENU_INFO_CLASS = "menu--main-info";
+const MENU_NAME_CLASS = "menu-name";
+const MENU_PRICE_CLASS = "menu-price";
+const MENU_OPT_CLASS = "menu--optional-icons";
 const IMG_SIZE = "250";
 const ICON_SIZE = "40";
 const RICE_DIV_ID = "rice-list";
 const NOODLE_DIV_ID = "noodle-list";
 const VEGETABLE_DIV_ID = "vegitable-list";
 const DRINK_DIV_ID = "drinks-list";
-const VEGETABLE_IMG_PATH = "image/detail/vegetables.webp";
-const SHRIMP_IMG_PATH = "image/detail/shrimp.webp";
+const NO_CHILLI_IMG_PATH = "/image/detail/icons/yu_icon-17.png";
+const NO_SHRIMP_IMG_PATH = "/image/detail/icons/yu_icon-27.png";
+const SHRIMP_IMG_PATH = "/image/detail/icons/yu_icon-28.png";
 makePanel(RICE_DIV_ID, RICE_MENU_LIST);
 makePanel(NOODLE_DIV_ID, NOODLE_MENU_LIST);
 makePanel(VEGETABLE_DIV_ID, VEGETABLE_MENU_LIST);
 makePanel(DRINK_DIV_ID, DRINK_MENU_LIST);
 
+/*
+
+<div class="menu-panel">
+	<div class="img-container"><img src="./image/detail/rice/seafood_curry_fried_rice.webp" width="250"
+			height="250" alt="">
+	</div>
+	<div class="menu--main-info">
+		<p class="menu-name">TEST PANEL2!!<br>2nd line</p>
+		<p class="menu-price">120</p>
+	</div>
+	<div class="menu--optional-icons">
+		<img src="image\detail\icons\yu_icon-17.png" width="40" height="40" alt="no">
+	</div>
+</div>
+*/
+
 function makePanel(ID, array) {
-	array.forEach((menu) => {
-		const div = document.createElement("div");
-		div.classList.add(MENU_CLASS);
+	array.forEach((menu, index) => {
+		const panelDiv = document.createElement("div");
+		panelDiv.classList.add(MENU_CLASS);
+
 		const containerDiv = document.createElement("div");
 		containerDiv.classList.add(IMG_CONTAINER_CLASS);
+
 		const img = document.createElement("img");
 		img.src = menu.imgPath;
 		img.width = IMG_SIZE;
 		img.height = IMG_SIZE;
-		const menuName = document.createElement("p");
-		menuName.classList.add("menu-name");
-		menuName.innerHTML = menu.name;
 		containerDiv.appendChild(img);
-		div.appendChild(containerDiv);
+		panelDiv.appendChild(containerDiv);
 
-		const optDiv = document.createElement("div");
-		optDiv.classList.add("optional-info");
-		//代用不可チェック,キーが存在してかつfalseの場合追加
+		const mainInfoDiv = document.createElement("div");
+		mainInfoDiv.classList.add(MENU_INFO_CLASS);
+
+		const menuName = document.createElement("p");
+		menuName.classList.add(MENU_NAME_CLASS);
+		menuName.innerHTML = menu.name;
+
+		const menuPrice = document.createElement("p");
+		menuPrice.classList.add(MENU_PRICE_CLASS);
+
+		mainInfoDiv.appendChild(menuName);
+		mainInfoDiv.appendChild(menuPrice);
+		panelDiv.appendChild(mainInfoDiv);
+		const iconDiv = document.createElement("div");
+		iconDiv.className = MENU_OPT_CLASS;
+		//代用不可チェックもしくはエビチェック、キーが存在してかつ評価
 		if (menu.substitute === false) {
-			const p = document.createElement("p");
-			p.className = "optional--substituted";
-			p.textContent = "※cannot be substituted.";
-			optDiv.appendChild(p);
+			const noChilliIcon = document.createElement("img");
+			noChilliIcon.width = ICON_SIZE;
+			noChilliIcon.height = ICON_SIZE;
+			noChilliIcon.src = NO_CHILLI_IMG_PATH;
+			noChilliIcon.alt = "can't substitued";
+			iconDiv.appendChild(noChilliIcon);
 		}
-		if (menu.stirFried === true || menu.shrimp === true) {
-			const iconDiv = document.createElement("div");
-			iconDiv.className = "optional--icons";
-			if (menu.stirFried === true) {
-				const icon = document.createElement("img");
-				icon.width = ICON_SIZE;
-				icon.height = ICON_SIZE;
-				icon.src = VEGETABLE_IMG_PATH;
-				icon.alt = "野菜";
-				iconDiv.appendChild(icon);
-			}
-			if (menu.shrimp === true) {
-				const icon = document.createElement("img");
-				icon.width = ICON_SIZE;
-				icon.height = ICON_SIZE;
-
-				icon.src = SHRIMP_IMG_PATH;
-				icon.alt = "エビ";
-				iconDiv.appendChild(icon);
-			}
-			optDiv.appendChild(iconDiv);
+		if (menu.shrimp === true) {
+			const ShrimpIcon = document.createElement("img");
+			ShrimpIcon.width = ICON_SIZE;
+			ShrimpIcon.height = ICON_SIZE;
+			const noShrimpIcon = ShrimpIcon.cloneNode();
+			ShrimpIcon.src = SHRIMP_IMG_PATH;
+			ShrimpIcon.alt = "stir-fried";
+			noShrimpIcon.src = NO_SHRIMP_IMG_PATH;
+			noShrimpIcon.alt = "shrimp-paste";
+			iconDiv.appendChild(ShrimpIcon);
+			iconDiv.appendChild(noShrimpIcon);
 		}
-		div.appendChild(optDiv);
-		div.appendChild(menuName);
-		document.getElementById(ID).appendChild(div);
+		panelDiv.appendChild(iconDiv);
+		panelDiv.addEventListener("click", function () {
+			console.log("clicked:" + `${ID}→${index}.${menu.name}`);
+		});
+		document.getElementById(ID).appendChild(panelDiv);
 	});
 }
