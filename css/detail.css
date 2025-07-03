@@ -1,10 +1,15 @@
 @charset "UTF-8";
 
 :root {
-	--brownColor: #d6ac80;
-	--warnRed: #c00000;
-	--mainColor: #000;
-	--subColor: #000;
+	--basic-text: saddlebrown;
+	--panel-border: #d6ac80;
+	--warn-red: #c00000;
+	--price-color: #c00000;
+	--typical-color: #F8A300;
+	--main-color: #000;
+	/*上書きあり*/
+	--sub-color: #000;
+	/*上書きあり*/
 }
 
 html {
@@ -27,13 +32,18 @@ body {
 }
 
 .rice-and-noodle {
-	--mainColor: #940000;
-	--subColor: #CE7268;
+	--main-color: #940000;
+	--sub-color: #CE7268;
+}
+
+.vegetable {
+	--main-color: ;
+	--sub-color: ;
 }
 
 .category-section>h2 {
 	font-weight: normal;
-	color: var(--mainColor);
+	color: var(--main-color);
 }
 
 .category {
@@ -54,9 +64,10 @@ body {
 
 .customize_option {
 	border-radius: 3rem;
-	border: var(--subColor) 2px solid;
+	border: var(--sub-color) 2px solid;
 	padding: 1rem min(4%, 2rem);
 	height: fit-content;
+	max-width: calc(1280px*0.5);
 }
 
 .customize_option .with-description,
@@ -72,7 +83,7 @@ body {
 
 .customize_option *:not(.description) {
 	font-weight: bold;
-	color: var(--mainColor);
+	color: var(--main-color);
 }
 
 .customize_option .head {
@@ -82,7 +93,7 @@ body {
 }
 
 .customize_option .description {
-	color: var(--subColor);
+	color: var(--sub-color);
 	margin-bottom: 0.6rem;
 }
 
@@ -91,6 +102,11 @@ body {
 	align-items: center;
 	flex-direction: row;
 	margin-bottom: 4rem;
+}
+
+.category-typical-menu div {
+	width: auto;
+	flex: 1;
 }
 
 .typical-img {
@@ -107,7 +123,30 @@ body {
 
 }
 
-.typical-menu-name {}
+.typical-menu--name,
+.typical-menu--price {
+	color: var(--typical-color);
+	font-weight: bold;
+}
+
+.typical-menu--price,
+.typical-menu--description {
+	font-size: 1.4rem;
+}
+
+.typical-menu--name {
+	font-size: 2rem;
+
+}
+
+.typical-menu--description {
+	color: var(--basic-text);
+
+}
+
+.typical-menu--price {
+	text-align: right;
+}
 
 .with-description {
 	display: flex;
@@ -122,7 +161,7 @@ body {
 
 
 .please-note {
-	color: var(--warnRed);
+	color: var(--warn-red);
 	font-size: 1.1rem;
 	font-weight: bold;
 }
@@ -138,59 +177,66 @@ body {
 }
 
 .menu-panel {
-	border: 2px solid var(--brownColor);
-	padding-top: 1rem;
+	border: 2px solid var(--panel-border);
 	background-color: white;
 	position: relative;
+	box-sizing: border-box;
 	text-align: center;
 	aspect-ratio: 7/8;
 }
 
-.menu-panel .img-container {
+.img-container {
+	position: absolute;
 	width: calc(100% - 2rem);
-	height: 62.5%;
-	/*250px/400px*/
+	height: 55%;
 	margin: 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
+:not(.drink) .img-container {
+	transition: 0.3s;
+}
+
+:not(.drink) .img-container:hover {
+	transform: rotate(5deg) scale(1.1);
+
+}
+
 .img-container img {
-	height: fit-content;
-	object-fit: contain;
+	max-height: 100%;
+	width: auto;
+	aspect-ratio: auto;
 	object-position: center;
 }
 
-.inset {
-	object-fit: cover;
-	position: absolute;
-	box-shadow: 0 0 10px 10px white inset;
+.menu--main-info {
+	position: relative;
+	top: 58%;
+	font-size: 1.2rem;
+	align-items: center;
 }
 
-.menu-panel .menu-name {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 17rem;
+.menu-name {
+
 	font-weight: 600;
-	color: saddlebrown;
+	color: var(--basic-text)
 }
 
-.optional-info {
+.menu-price {
+	color: var(--price-color);
+}
+
+.typical-menu--price::before,
+.menu-price::before {
+	content: "TW$";
+}
+
+.menu--optional-icons {
 	position: absolute;
-	inset: 0;
-	top: 57%;
-}
-
-.optional--substituted {
-	color: var(--warnRed);
-	font-weight: 400;
-
-	text-shadow: #6665 1px 2px 2px;
-}
-
-.optional--icons {
+	right: 1rem;
+	bottom: 1rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: left;
@@ -204,7 +250,7 @@ body {
 
 .teptip {
 	position: relative;
-	color: var(--brownColor);
+	color: var(--panel-border);
 	overflow: hidden;
 }
 
@@ -261,8 +307,8 @@ body {
 }
 
 svg {
-	stroke: var(--brownColor);
-	fill: var(--brownColor);
+	stroke: var(--panel-border);
+	fill: var(--panel-border);
 }
 
 
