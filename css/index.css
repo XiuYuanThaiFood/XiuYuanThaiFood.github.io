@@ -1,17 +1,18 @@
 @charset "UTF-8";
 
 body {
-    background-color: #f5f0e1;
+    background-color: #ffffff;
     margin: 0;
 }
 
 .navi {
-    background-color: #940000;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 30px;
-    height: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
@@ -20,10 +21,17 @@ body {
     padding-left: 30px;
 }
 
+.logo h4 {
+    margin: 0;
+    width: 70px;
+    font-family: HGS行書体;
+}
+
 .site-nav {
     display: flex;
     justify-content: right;
 }
+
 .site-nav ul {
     list-style: none;
     display: flex;
@@ -37,7 +45,7 @@ body {
 }
 
 .site-nav ul a {
-    color: #ffffff;
+    color: #333333;
     text-decoration: none;
 }
 
@@ -59,68 +67,75 @@ body {
 .wrapper {
     display: flex;
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     align-items: center;
     justify-content: center;
     color: #ffffff;
 }
 
 .wrapper img {
-    width: 1200px;
-    height: 750px;
+    width: 100dvw;
+    height: auto;
 }
 
-.wrapper h4 {
+.wrapper-text {
     padding: 10px;
-    background-color: #D6AC8080;
+    color: #521E15;
     font-family: Calibri;
-    position: absolute;
     letter-spacing: 0.1em;
+    margin: 0;
+    font-size: 30px;
 }
 
-.wrapper h1 {
-    position: absolute;
-    font-family: HG行書体;
-    bottom: 100px;
-    text-shadow: 2px 2px 5px #595959;
-}
-
-.weeks-special {
+.weekly-special {
     display: flex;
-    background-color: #ffffff;
+    background-color: #F5F0E180;
 } 
 
-.weeks-special > div {
+.weekly-special > div {
     width: 50%;
 }
 
-.weeks-special > div:first-child {
+.weekly-special > div:first-child {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-left: 170px;
+    align-items: flex-end;
 }
 
-.weeks-special h2 {
-    color: #940000;
+.weekly-special h2 {
+    color: #6B3D36;
     text-decoration: underline;
     text-align: center;
     font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.menu-name {
+    color: #f8a300;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.weekly-special a {
+    margin-left: 30px;
+    color: #f8a300;
 }
 
 .introduction {
-    color: #D6AC80;
-    width: 280px;
+    color: #8B5E3C;
+    width: 300px;
     font-weight: bold;
-    margin-top: 40px;
     line-height: 1.8;
+    margin-bottom: 0;
 }
 
-.weeks-special img {
+.weekly-special img {
     width: 60%;
     height: 50%;
     transform: rotate(-8deg);
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .special-menu {
@@ -130,8 +145,7 @@ body {
 .special-menu > div {
     color: #f8a300;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 .special-menu p {
@@ -149,13 +163,12 @@ body {
 
 /* Menu Section */
 .menu-section {
-    background-color: #f5f0e1;
     text-align: center;
     padding-bottom: 50px;
 }
 
 .menu-section h2 {
-    color: #940000;
+    color: #6B3D36;
     font-size: 40px;
     text-decoration: underline;
 }
@@ -190,7 +203,6 @@ input[type="radio"] {
 
 .menu-box-wrapper {
     overflow: hidden;
-    border: 7px solid #d6ac80;
     background-color: #fff;
     padding: 40px 0;
 }
@@ -222,44 +234,57 @@ input[type="radio"] {
 }
 
 .back-to-top {
-    position: fixed;
+    position: sticky;
     padding-right: 30px;
     bottom: 0;
     right: 0;
+    left: 100%;
 }
 
 /* Footer */
 .site-footer {
-     text-align: center;
-     font-family: Calibri;
+    background-color: #F5F0E1;
+    text-align: center;
+    font-family: Calibri;
 }
 
 .footer-info {
-    color: #ffffff;
-    background-color: #940000;
+    color: #333333;
     text-align: left;
     padding-left: 175px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.footer-right {
-    display: flex;
-    gap: 30px;
-    padding-right: 15px;
+.footer-left p:first-child {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
-.footer-right img {
-    width: 40px;
-    height: 40px;
+.footer-right {
+    display: flex;
+    padding-right: 15px;
+    flex-direction: column;
 }
 
 .footer-copyright {
-    color: #595959;
+    color: #333333;
     margin-top: 20px;
     font-size: 14px;
-    background-color: #f5f0e1;
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+    padding-top: 25px;
+    justify-content: flex-end;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
 }
