@@ -32,13 +32,17 @@ body {
 }
 
 .rice-and-noodle {
-	--main-color: #940000;
+	--main-color: #D3212C;
 	--sub-color: #CE7268;
 }
 
 .vegetable {
-	--main-color: ;
+	--main-color: #007E39;
 	--sub-color: ;
+}
+
+.juices-and-drinks {
+	--main-color: #FF8C00;
 }
 
 .category-section>h2 {
@@ -51,50 +55,87 @@ body {
 	font-weight: bold;
 }
 
-.customize_segment {
-	display: flex;
-	flex-direction: row;
-	gap: 2rem;
+.customize-segment {
 	border-radius: 3rem;
 	border: var(--sub-color) 2px solid;
+	padding: 1rem min(4%, 2rem);
 }
 
-.customize_segment>div {
+.customize-inner-segment {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	gap: 2rem;
+}
+
+.customize-inner-segment>.vr {
+	width: 1px;
+	background-color: var(--main-color);
+}
+
+.customize-inner-segment>div {
 	width: 50%;
 	box-sizing: border-box;
 }
 
-.customize_option {
-
-	padding: 1rem min(4%, 2rem);
+.customize-option {
 	height: fit-content;
-	max-width: calc(1280px*0.5);
 }
 
-.customize_option .with-description,
-.customize_option .description {
+.customize-option .with-description,
+.customize-option .description {
 	margin: 0;
 }
 
 .sub-custimize-block {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 }
 
-.customize_option *:not(.description) {
+.customize-option *:not(.description) {
 	font-weight: bold;
 	color: var(--main-color);
 }
 
-.customize_option .head {
+.spice-graph {
+	position: relative;
+}
+
+.spice-level {
+	width: 6rem;
+}
+
+.spice-graph .with-description {
+	position: relative;
+	left: 5rem;
+}
+
+.spice-graph>img {
+	position: absolute;
+	height: 100%;
+	width: auto;
+}
+
+.customize-option .head {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	font-size: 1.3rem;
 	margin-top: 1rem;
 
 }
 
-.customize_option .description {
+.customize-option .head .choice-meat {
+	margin-left: 2rem;
+}
+
+.customize-option .head img {
+	margin-right: 2rem;
+}
+
+.customize-option .description {
 	color: var(--sub-color);
+	font-weight: normal;
 	margin-bottom: 0.6rem;
 }
 
@@ -137,7 +178,7 @@ body {
 
 .typical-menu--name {
 	font-size: 2rem;
-
+	;
 }
 
 .typical-menu--description {
@@ -156,34 +197,46 @@ body {
 
 }
 
-.with-description .spice-level {
-	width: 6rem;
-}
+
 
 
 .please-note {
 	color: var(--warn-red);
 	font-size: 1.1rem;
-	font-weight: bold;
+
+}
+
+.menu-section {
+	position: relative;
+	background-color: #EDE8DF;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	margin-bottom: 4rem;
+}
+
+.image {
+	position: absolute;
+	right: 7vw;
 }
 
 .img-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, calc(1280px*0.26));
 	justify-content: center;
-	gap: 2rem;
-	margin: 0 5rem 7rem 5rem;
+	gap: 4rem 2rem;
+	margin: 0 5rem;
 
 	min-height: calc(381px + 1rem);
 }
 
 .menu-panel {
-	border: 2px solid var(--panel-border);
 	background-color: white;
 	position: relative;
 	box-sizing: border-box;
-	text-align: center;
+	text-align: left;
 	aspect-ratio: 7/8;
+
+	box-shadow: #0005 4px 3px 3px;
 }
 
 .img-container {
@@ -196,14 +249,6 @@ body {
 	justify-content: center;
 }
 
-.menu-panel {
-	transition: 0.3s;
-}
-
-.menu-panel:hover {
-	transform: rotate(1deg) scale(1.05);
-}
-
 .img-container img {
 	max-height: 100%;
 	width: auto;
@@ -211,15 +256,36 @@ body {
 	object-position: center;
 }
 
+:not(.juices-and-drinks) .menu-panel {
+	transition: 0.3s;
+
+}
+
+:not(.juices-and-drinks) .menu-panel:hover {
+	transform: rotate(1deg) scale(1.05);
+	cursor: pointer;
+}
+
+.juices-and-drinks .menu-panel {
+	transition: none;
+}
+
+.juices-and-drinks .menu-panel:hover {
+	transform: none;
+	cursor: default;
+}
+
+
+
 .menu--main-info {
 	position: relative;
 	top: 58%;
+	margin: 0 1rem;
 	font-size: 1.2rem;
 	align-items: center;
 }
 
 .menu-name {
-
 	font-weight: 600;
 	color: var(--basic-text)
 }
@@ -229,7 +295,8 @@ body {
 }
 
 .typical-menu--price::before,
-.menu-price::before {
+.menu-price::before,
+.modal-price::before {
 	content: "TW$";
 }
 
@@ -425,12 +492,12 @@ svg {
 		flex-direction: column;
 	}
 
-	.customize_notice--text {
+	.customize-notice--text {
 		transform: 0;
 	}
 
 	.preview-img,
-	.customize_option {
+	.customize-option {
 		width: 90%;
 	}
 

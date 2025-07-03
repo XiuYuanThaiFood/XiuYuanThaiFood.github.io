@@ -118,29 +118,13 @@ const RICE_DIV_ID = "rice-list";
 const NOODLE_DIV_ID = "noodle-list";
 const VEGETABLE_DIV_ID = "vegitable-list";
 const DRINK_DIV_ID = "drinks-list";
-const NO_CHILLI_IMG_PATH = "/image/detail/icons/yu_icon-17.png";
+const NO_CHILLI_IMG_PATH = "/image/detail/icons/yu_icon-35.png";
 const NO_SHRIMP_IMG_PATH = "/image/detail/icons/yu_icon-27.png";
 const SHRIMP_IMG_PATH = "/image/detail/icons/yu_icon-28.png";
 makePanel(RICE_DIV_ID, RICE_MENU_LIST);
 makePanel(NOODLE_DIV_ID, NOODLE_MENU_LIST);
 makePanel(VEGETABLE_DIV_ID, VEGETABLE_MENU_LIST);
 makePanel(DRINK_DIV_ID, DRINK_MENU_LIST);
-
-/*
-
-<div class="menu-panel">
-	<div class="img-container"><img src="./image/detail/rice/seafood_curry_fried_rice.webp" width="250"
-			height="250" alt="">
-	</div>
-	<div class="menu--main-info">
-		<p class="menu-name">TEST PANEL2!!<br>2nd line</p>
-		<p class="menu-price">120</p>
-	</div>
-	<div class="menu--optional-icons">
-		<img src="image\detail\icons\yu_icon-17.png" width="40" height="40" alt="no">
-	</div>
-</div>
-*/
 
 function makePanel(ID, array) {
 	array.forEach((menu, index) => {
