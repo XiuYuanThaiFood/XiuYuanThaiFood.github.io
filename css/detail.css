@@ -48,6 +48,10 @@ body {
 	width: fit-content;
 }
 
+.category-section {
+	background-color: #EDE8DF;
+}
+
 .category-section>h2 {
 	font-weight: normal;
 	color: var(--main-color);
@@ -68,6 +72,8 @@ body {
 .customize-segment {
 	border-radius: 3rem;
 	border: var(--main-color) 2px solid;
+	margin: 0 2rem;
+	background-color: white;
 	padding: 1rem min(4%, 2rem);
 }
 
