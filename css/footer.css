@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* Footer */
+.site-footer {
+    background-color: #F5F0E180;
+    text-align: center;
+    font-family: Calibri;
+    /* 線性漸層範例：從左到右，從藍色漸變到淺藍色 */
+    background-image: linear-gradient(to top, #CE726866, #f5f0e180, #ffffff);
+    /* 你也可以指定角度，例如從左上到右下 45 度 */
+    /* background-image: linear-gradient(45deg, #FFC0CB, #FF69B4); */
+    /* 從上到下，從紅色漸變到黃色 */
+    /* background-image: linear-gradient(to bottom, #FF0000, #FFFF00); */
+    /* 多個顏色的漸層，顏色之間可以用百分比控制過渡點 */
+    /* background-image: linear-gradient(to right, #f44336, #e91e63 50%, #9c27b0); */
+}
+
+.footer-info {
+    color: #521E15;
+    text-align: left;
+    padding-left: 175px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left p:first-child {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-family: HGS行書体;
+}
+
+.footer-right {
+    display: flex;
+    padding-right: 15px;
+    flex-direction: column;
+}
+
+.footer-copyright {
+    color: #521E15;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+    padding-top: 25px;
+    justify-content: flex-end;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+}
+@media screen and (max-width: 600px) {
+    /* Footer調整 */
+    .footer-info {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .icons {
+        justify-content: center;
+        gap: 15px;
+    }
+}
