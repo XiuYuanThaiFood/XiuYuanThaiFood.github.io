@@ -1,111 +1,30 @@
 @charset "UTF-8";
 
 body {
-    background-color: #f5f0e1;
+    background-color: #ffffff;
     margin: 0;
-}
-
-.navi {
-    background-color: #940000;
-}
-
-.logo {
-    width: 30px;
-    height: 10px;
-}
-
-.logo img {
-    width: 100px;
-    height: 100px;
-    padding-left: 30px;
-}
-
-.site-nav {
-    display: flex;
-    justify-content: right;
-}
-
-.site-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    font-family: Calibri;
-    font-weight: bold;
-    font-size: 30px;
-    gap: 50px;
-    margin: 17px;
-    align-items: center;
-}
-
-.site-nav ul a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.site-nav ul img {
-    width: 40px;
-    height: 40px;
-}
-
-.site-nav ul p {
-    font-size: 15px;
-    margin: 0;
-}
-
-.site-nav li {
-    text-align: center;
-}
-
-/* Footer */
-.site-footer {
-     text-align: center;
-     font-family: Calibri;
-}
-
-.footer-info {
-    color: #ffffff;
-    background-color: #940000;
-    text-align: left;
-    padding-left: 175px;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-right {
-    display: flex;
-    gap: 30px;
-    padding-right: 15px;
-}
-
-.footer-right img {
-    width: 40px;
-    height: 40px;
-}
-
-.footer-copyright {
-    color: #595959;
-    margin-top: 20px;
-    font-size: 14px;
-    background-color: #f5f0e1;
 }
 
 .section-title {
-    color: #940000;
+    color: #6B3D36;
     font-family: Calibri;
     font-size: 40px;
     font-weight: bold;
     text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.about .section-title {
-    text-align: center;
+.section-title::before {
+    content: "";
+    width: 136px;
+    height: 1px;
+    background-color: #6B3D36;
 }
 
 .about-box {
-    background-color: #D6AC80;
+    background-color: #D6AC80CC;
     display: flex;
     justify-content: center;
     height: 400px;
@@ -133,16 +52,16 @@ body {
 }
 
 .about-detail p {
-    color: #f5f0e1;
+    color: #333333;
     font-family: Calibri;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 1.8;
+    font-size: 23px;
+    line-height: 1.5;
     width: 400px;
 }
 
 .about-slogan {
-    background-color: #F8A300;
+    background-color: #CE726866;
     margin: 0 0 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -152,19 +71,19 @@ body {
 
 .about-slogan p {
     color: #ffffff;
-    font-family: HGP行書体;
     font-size: 30px;
     font-style: italic;
     text-indent: 4em;
-    text-shadow: 1px 1px #595959;
+    text-shadow: 1px 1px #333333;
 }
 
+/* contact */
 .contact {
-    background-color: #ffffff;
+    color: #6B3D36;
 }
 
 .contact .section-title {
-    padding: 50px 0 40px 140px ;
+    padding: 50px 0 40px 0px ;
 }
 
 .map {
@@ -180,40 +99,49 @@ body {
 
 .contact-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #CE7268;
+    justify-content: center;
+    margin: 50px 0;
 }
 
-.contact-info p {
+.contact-info-icons {
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    height: 25px;
+    gap: 10px;
+    padding-top: 12px;
+    padding-right: 10px;
+}
+
+.contact-info-text {
     text-align: left;
-    width: 700px;
     font-family: Calibri;
-    color: #D6AC80;
+    color: #ffffff;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .inquiry {
-    background-color: #ffffff;
     display: flex;
     justify-content: center;
-    padding: 15px 0 25px;
 }
 
 .inquiry .button {
     color: #940000;
-    background-color: #f5f0e1;
     border: #940000 3px solid;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     padding: 5px 15px;
+    box-shadow: 2px 2px 2px;
 }
 
 .back-to-top {
-    position: fixed;
+    position: sticky;
     padding-right: 30px;
     bottom: 0;
     right: 0;
+    left: 100%;
 }

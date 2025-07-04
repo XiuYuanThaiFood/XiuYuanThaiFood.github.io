@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XiuYuanThaiFood</title>
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header class="navi">
         <div class="logo">
-            <img src="image/logo-white.png" alt="logo">
+            <img src="image/about-logo.png" alt="logo">
+            <h4>Xiu Yuan</h4>
         </div>
         <nav class="site-nav">
             <ul>
@@ -27,19 +30,16 @@
                 <li>
                     <a href="#">
                         <img src="image/en.png">
-                        <p>EN</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="image/tw.png">
-                        <p>TW</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="image/jp.png">
-                        <p>JP</p>
                     </a>
                 </li>
             </ul>
@@ -47,10 +47,12 @@
     </header>
     <section class="about">
         <h2 class="section-title">About</h2>
+        <div class="about-slogan">
+            <p>
+                Each dish is a continuation of the bond we share.
+            </p>
+        </div>
         <div class="about-box">
-            <div class="about-logo">
-                <img src="./image/about-logo.png" alt="Xiu Yuan Logo">
-            </div>
             <div class="about-detail">
                 <p>
                     Founded in 2019, we are two sisters sharing warmth and sincerity through every Thai dish we serve.
@@ -59,11 +61,9 @@
                     The name “Xiu Yuan” comes from our mother’s name and her heartfelt teaching—to always cherish the relationships we build.
                 </p>
             </div>
-        </div>
-        <div class="about-slogan">
-            <p>
-                Each dish is a continuation of the bond we share.
-            </p>
+            <div class="about-logo">
+                <img src="./image/about-logo.png" alt="Xiu Yuan Logo">
+            </div>
         </div>
     </section>
     <section class="contact">
@@ -72,15 +72,22 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14452.08594529618!2d121.52700459999997!3d25.101133999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad27726f4da5%3A0x827e640e8038e3c1!2z56eA57iB6a6u5p6c5rGBIMKwIOazsOW8j-Wwj-WQgw!5e0!3m2!1sja!2sjp!4v1751266862823!5m2!1sen!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="contact-info">
-            <p>
-                🕒 Opened from : 11:00～14:00, 17:00～20:00
-            </p>
-            <p>
-                ❌ Close on : Sundays & Public Holidays
-            </p>
-            <p>
-                📍 Address : No. 122, Section 2, Zhicheng Rd, Shilin District, Taipei City, Taiwan 111
-            </p>
+            <div class="contact-info-icons">
+                <img src="./image/open time.png" alt="open time">
+                <img src="./image/close on.png" alt="close on">
+                <img src="./image/address.png" alt="adress">
+            </div>
+            <div class="contact-info-text">
+                <P>
+                    Opened from : 11:00～14:00, 17:00～20:00
+                </p>
+                <p>
+                    Close on : Sundays & Public Holidays
+                </p>
+                <p>
+                    Address : No. 122, Section 2, Zhicheng Rd, Shilin District, Taipei City, Taiwan 111
+                </p>
+            </div>
         </div>
     </section>
     <section class="inquiry">
@@ -89,29 +96,30 @@
         </a>
     </section>
     <a href="#" class="back-to-top">
-        <img src="./image/previous.png" alt="Back to Top">
+        <img src="./image/yu_icon-5.png" alt="Back to Top">
     </a>
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-info">
             <div class="footer-left">
-                <p>11:00～14:00, 17:00～20:00 (Mon.～Sat.)</p>
-                <p>No. 122, Section 2, Zhicheng Rd, Shilin District, Taipei City, Taiwan 111</p>
+                <p>Xiu Yuan</p>
+                <p>Open store: 11:00～14:00, 17:00～20:00 (Mon.～Sat.)</p>
+                <p>Adress: No. 122, Section 2, Zhicheng Rd, Shilin District, Taipei City, Taiwan 111</p>
             </div>
             <div class="footer-right">
-                <a href="#">
-                    <img src="./image/fb.png">
-                </a>
-                <a href="#">
-                    <img src="./image/ig.png">
-                </a>
-                <a href="#">
-                    <img src="./image/line.png">
-                </a>
+                <div class="icons">
+                    <a href="#">
+                        <img src="./image/fb.png">
+                    </a>
+                    <a href="#">
+                        <img src="./image/ig.png">
+                    </a>
+                    <a href="#">
+                        <img src="./image/line.png">
+                    </a>
+                </div>
+                <p class="footer-copyright">© Xiu Yuan  All Rights Reserved.</p>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <p>© Xiu Yuan  All Rights Reserved.</p>
         </div>
     </footer>
 </body>
