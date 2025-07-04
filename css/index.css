@@ -107,78 +107,6 @@ body {
     margin: 5px;
 }
 
-/* Menu Section */
-/*.menu-section {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.menu-section h2 {
-    color: #6B3D36;
-    font-size: 40px;
-    text-decoration: underline;
-}
-
-.menu-carousel-box {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-.carousel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #D6AC80;
-}
-
-.carousel.left {
-    left: -115px;
-}
-
-.carousel.right {
-    right: -115px;
-}
-
-.menu-box-wrapper {
-    overflow: hidden;
-    background-color: #fff;
-    padding: 40px 0;
-}
-
-.menu-box-group {
-    display: flex;
-    width: 200%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.menu-box {
-    display: flex;
-    width: 50%;
-    gap: 30px;
-    justify-content: center;
-}
-
-.menu-item img {
-    width: 100%;
-    height: auto;
-}
-
-#slide1:checked ~ .menu-box-wrapper .menu-box-group {
-    transform: translateX(0%);
-}
-
-#slide2:checked ~ .menu-box-wrapper .menu-box-group {
-    transform: translateX(-50%);
-}*/
-
 .menu {
     text-align: center;
     padding: 1em 0;
@@ -240,7 +168,7 @@ input[type="radio"] {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* 顯示 3 行 */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
