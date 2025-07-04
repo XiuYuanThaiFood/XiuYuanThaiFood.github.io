@@ -45,9 +45,6 @@ body {
 	color: var(--main-color);
 	font-style: italic;
 	font-size: 1.3rem;
-	position: relative;
-	left: 45%;
-	margin: 4rem 0;
 	width: fit-content;
 }
 
@@ -76,23 +73,29 @@ body {
 
 .customize-inner-segment {
 	display: flex;
-	flex-direction: row;
-	align-items: stretch;
 	gap: 2rem;
 }
 
-.customize-inner-segment>.vr {
-	width: 1px;
-	background-color: var(--main-color);
+.customize-inner-segment hr {
+	margin: 0;
+	color: var(--main-color)
 }
 
 .customize-inner-segment>div {
-	width: 50%;
 	box-sizing: border-box;
 }
 
+.customize-inner-segment:nth-child(1 of .sub-custimize-block),
+.customize-inner-segment:nth-child(2 of .sub-custimize-block) {
+	width: 30%;
+}
+
+.customize-inner-segment:nth-child(3 of .sub-custimize-block) {
+	width: 20%;
+}
+
 .customize-option {
-	height: fit-content;
+	height: stretch;
 }
 
 .customize-option .with-description,
@@ -159,8 +162,9 @@ body {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	margin: 4rem auto;
+	margin: 2rem auto;
 	padding: 0 4rem;
+	gap: 2rem;
 }
 
 .category-typical-menu>div {
@@ -203,7 +207,7 @@ body {
 }
 
 .typical-menu--price {
-	text-align: right;
+	text-align: left;
 
 }
 
@@ -228,12 +232,12 @@ body {
 	background-color: #EDE8DF;
 	padding-top: 4rem;
 	padding-bottom: 4rem;
-	margin-bottom: 4rem;
+	margin-bottom: 6rem;
 }
 
 .image {
 	position: absolute;
-	right: 7vw;
+	right: 9%;
 }
 
 .img-list {
@@ -529,7 +533,7 @@ svg {
 	cursor: pointer;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:500px) {
 
 	.customize-inner-segment,
 	.category-typical-menu {

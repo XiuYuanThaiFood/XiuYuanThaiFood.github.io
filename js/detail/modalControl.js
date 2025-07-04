@@ -26,7 +26,7 @@ function showModal(category, menu) {
 	PRICE.innerHTML = menu.price;
 	IMG.src = menu.imgPath;
 
-	//TBR.
+	//TBR
 	DESC.innerHTML = DESC.innerHTML;
 	INGREDIENT.innerHTML = INGREDIENT.innerHTML;
 

@@ -6,6 +6,7 @@ const RICE_MENU_LIST = [
 	},
 	{
 		imgPath: "./image/detail/rice/pork_fried_rice_with_egg.webp",
+		id: "",
 		name: "Pork Fried Rice with Egg",
 		price: 110,
 	},
