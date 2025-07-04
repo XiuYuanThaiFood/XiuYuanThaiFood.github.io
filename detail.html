@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="A page where you can view a list of menu items offered at Xiu Yuan, pricing, customization information, detailed information, etc.">
 	<title>XiuYuanThaiFood</title>
 	<link rel="stylesheet" href="../css/detail.css" />
 
@@ -14,7 +16,7 @@
 	<header><br /><br /><br /><br /></header><!--要置き換え-->
 	<main>
 		<div class="category-section rice-and-noodle" id="rice">
-			<h2>──<span class="category">Rice</span> & Noodle</h2>
+			<h2><span class="category">Rice</span> & Noodle</h2>
 			<div class="customize-segment">
 				<div class="customize-inner-segment">
 					<div class="customize-option">
@@ -85,7 +87,7 @@
 			</div>
 		</div>
 		<div class="category-section rice-and-noodle" id="noodle">
-			<h2>──Rice& <span class="category">Noodle</span></h2>
+			<h2>Rice& <span class="category">Noodle</span></h2>
 			<div class="customize-segment">
 				<div class="customize-inner-segment">
 					<div class="customize-option">
@@ -136,65 +138,114 @@
 					<p class="head">
 						<img src="image\detail\icons\yu_icon-30.png" width="50" height="50" alt>
 						<span>
-							Noodle Choice: Flat rice Noodles<span class="description">(Sen Yai) </span>
-							/ Rice Noodle<span class="description">(Sen Lek) </span>
-							/ Rice Vermicelli<span class="description">(Sen Mee) </span>
+							Noodle Choice:
+							&emsp; Flat rice Noodles<span class="description">(Sen Yai) </span>
+							&emsp;/&emsp;Rice Noodle<span class="description">(Sen Lek) </span>
+							&emsp;/&emsp; Rice Vermicelli<span class="description">(Sen Mee) </span>
 						</span>
 					</p>
 				</div>
 			</div>
-			<p class=" please-note">※ Please note: Some dishes are fixed and cannot be substituted.</p>
-			<div id="noodle-list" class="img-list">
-				<!--scriptで追加される-->
+			<div class="category-typical-menu">
+				<div>
+					<p class="typical-menu--name">Tom Yom seafood soup noddle
+						<img src="image\detail\icons\yu_icon-23.png" width="50" height="50" alt="badge">
+					</p>
+					<p class="typical-menu--description">Spicy‑sour seafood noodle soup with creamy Tom Yum broth,
+						infused with coconut milk and aromatic Thai spices.</p>
+					<p class="typical-menu--price">130</p>
+				</div>
+				<div class="typical-img">
+					<img src="image\detail\noodle\IMG_1002.webp" width="500" height="368" alt="画像"
+						style="transform:rotate(-5deg)" fetchpriority="high">
+				</div>
+
+			</div>
+			<div class="menu-section">
+				<div id="noodle-list" class="img-list">
+					<!--scriptで追加される-->
+				</div>
+				<p class="image">※Image for reference only - final presentation may vary.</p>
 			</div>
 		</div>
 		<br>
 		<br>
 		<div class="category-section vegetable-delights" id="vegetable-delights">
-			<h2 class="category">Vegetable Delights
-			</h2>
-			<div class="category-preview"> <!--vegetable list-->
-				<div class="preview-img">
-					<img src="./image/detail/vegetable/IMG_1022.webp" width="500" height="358" alt="画像">
-					<div class="img-description">Som Tam</div>
+			<h2> <span class="category">Vegetable Delights</span></h2>
+			<div class="customize-segment">
+				<div class="customize-inner-segment">
+					<div class="customize-option">
+						<p class="head">Spice levels customizable:</p>
+						<div class="spice-graph">
+							<img src="image/detail/icons/spice_level_arrow.svg" width="100" height="200" alt=".">
+							<p class="with-description ">
+								<span class="spice-level">None:</span>
+								<img src="image\detail\icons\yu_icon-13.png" width="50" height="50" alt="none">
+							</p>
+							<p class="with-description ">
+								<span class="spice-level">Mild:</span>
+								<img src="image\detail\icons\yu_icon-14.png" width="50" height="50" alt="mild">
+							</p>
+							<p class="with-description ">
+								<span class="spice-level">Medium:</span>
+								<img src="image\detail\icons\yu_icon-15.png" width="50" height="50" alt="medium">
+							</p>
+							<p class="with-description ">
+								<span class="spice-level">Hot:</span>
+								<img src="image\detail\icons\yu_icon-16.png" width="50" height="50" alt="hot">
+							</p>
+						</div>
+					</div>
+					<div class="vr"></div>
+					<div class="sub-custimize-block">
+						<div class="customize-option">
+							<div class="head">Need softer dishes?</div>
+							<p class="description">We can adjust texture for elderly or those with chewing difficulties.
+							</p>
+						</div>
+						<div class="customize-option">
+							<div class="head">Veggies:<br><!--このレイアウト本来とは違う-->
+								<span class="choice-meat">Stir-fried</span>
+								<img src="image\detail\icons\yu_icon-29.png" width="50" height="50" alt="include meat">
+								or <span class="choice-meat">Wok-tossed with Shrimp Paste</span>
+								<img src="image\detail\icons\yu_icon-28.png" width="50" height="50" alt="exclude meat">
+							</div>
+						</div>
+						<p class="please-note">※If you have any food allergies,please inform our staff.</p>
+					</div>
 				</div>
-				<div class="customize-option">
-					<p class="head">Spice levels customizable:</p>
-					<p class="with-description "><span class="spice-level">None:</span><span
-							data-chilli-count="0"></span>
+
+			</div>
+			<div class="category-typical-menu">
+				<div class="typical-img">
+					<img src="image\detail\vegetable\IMG_1022.webp" width="500" height="368" alt="画像"
+						fetchpriority="high">
+				</div>
+				<div>
+					<p class="typical-menu--name">Som Tam
+						<img src="image\detail\icons\yu_icon-23.png" width="50" height="50" alt="badge">
 					</p>
-					<p class="description">Ideal for those who can't handle any heat.</p>
-					<p class="with-description "><span class="spice-level">Mild:</span><span
-							data-chilli-count="1"></span>
-					</p>
-					<p class="description">A gentle kick — for those moderate spice lovers.</p>
-					<p class="with-description "><span class="spice-level">Medium:</span><span
-							data-chilli-count="2"></span>
-					</p>
-					<p class="description">Balanced warmth — perfect for fans of
-						flavorful heat.</p>
-					<p class="with-description "><span class="spice-level">Hot:</span><span
-							data-chilli-count="3"></span>
-					</p>
-					<p class="description">Bold and spicy — for adventurous spice
-						seekers.</p>
-					<h3>
-						Veggies:<br>
-						<br>
-						Stir-Fried<img src="image/detail/vegetables.webp" width="40" height="40" alt="vegi"><br>
-						Wok-Tossed with Shrimp Paste<img src="image/detail/shrimp.webp" width="40" height="40"
-							alt="shrimp">
-					</h3>
+					<p class="typical-menu--description">A refreshing Thai green papaya salad with shredded green
+						papaya, cherry tomatoes, green beans, peanuts, and a spicy-sour
+						dressing.</p>
+					<p class="typical-menu--price">120</p>
 				</div>
 			</div>
-			<div id="vegitable-list" class="img-list">
-				<!--scriptで追加される。-->
+			<div class="menu-section">
+				<div id="vegitable-list" class="img-list">
+					<!--scriptで追加される。-->
+				</div>
+				<p class="image">※Image for reference only - final presentation may vary.</p>
 			</div>
 		</div>
 		<div class="category-section juices-and-drinks" id="juices-and-drinks">
-			<p class="category">Juices & Drinks</p>
-			<div id="drinks-list" class="img-list">
-				<!--scriptで追加される-->
+			<h2><span class="category">Juices & Drinks</span></h2>
+			<p>—Freshly Squeezed Goodness in Every Sip.</p>
+			<div class="menu-section">
+				<div id="drinks-list" class="img-list">
+					<!--scriptで追加される-->
+				</div>
+				<p class="image">※Image for reference only - final presentation may vary.</p>
 			</div>
 		</div>
 		<div class="teptip">
@@ -206,10 +257,12 @@
 				<p>Sourced from Thailand’s fragrant Nam Hom coconuts; <br>naturally sweet, electrolytic, and
 					refreshing.
 				</p>
+				<p class="typical-menu--price">50</p>
 			</div>
 			<div>
 				<p class="teptip-desc">Tamarind Juice (Nam Makham) ─</p>
 				<p>Thailand’s beloved tangy-sweet juice,<br>full of flavor and health benefits.</p>
+				<p class="typical-menu--price">50</p>
 			</div>
 		</div>
 
@@ -217,17 +270,23 @@
 			<div class="modal-contents">
 				<p class="modal-title">PAD </p>
 				<p class="modal-price">120</p>
-				<p class="modal-description">?????</p>
+				<p class="modal-description">Spicy stir-fried minced pork with
+					garlic, chili & holy basil, served
+					over rice. Juicy and aromatic.</p>
 				<div class="ingredients">
 					<img src="image\detail\icons\yu_icon-32.png" width="40" height="40" alt="icon">
 					<p class="key-ingredients">key ingredients</p>
-					<p class="ingredients-field">many many items</p>
+					<p class="ingredients-field">Ground pork, holy basil leaves, garlic, ginger, chili, cherry
+						tomatoes, soy sauce, fish sauce, lime juice</p>
 				</div>
 			</div>
 			<div class="modal-img-container">
 				<img class="modal-image" src="" width="" height="" alt="">
 			</div>
-			<div class="modal-custom-icon"></div>
+			<div class="modal-custom-icon">
+				<img id="modal-substitute-icon" src="" width="40" height="40" alt="substituted info">
+				<img id="modal-select-icon" src="" width="40" height="40" alt="customize select info by category">
+			</div>
 			<img class="hide-button" src="image/detail/icons/modal_close_button.svg" width="48" height="48"
 				alt="cancel button">
 		</div>

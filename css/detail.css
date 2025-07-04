@@ -36,7 +36,7 @@ body {
 	--sub-color: #CE7268;
 }
 
-.vegetable {
+.vegetable-delights {
 	--main-color: #007E39;
 	--sub-color: ;
 }
@@ -45,9 +45,25 @@ body {
 	--main-color: #FF8C00;
 }
 
+.juices-and-drinks>p {
+	color: var(--main-color);
+	font-style: italic;
+	font-size: 1.3rem;
+	position: relative;
+	left: 50%;
+	margin: 4rem 0;
+}
+
 .category-section>h2 {
 	font-weight: normal;
 	color: var(--main-color);
+	/* position: sticky;
+	top: 2%;
+	z-index: 5; */
+}
+
+.category-section>h2::before {
+	content: "──";
 }
 
 .category {
@@ -57,7 +73,7 @@ body {
 
 .customize-segment {
 	border-radius: 3rem;
-	border: var(--sub-color) 2px solid;
+	border: var(--main-color) 2px solid;
 	padding: 1rem min(4%, 2rem);
 }
 
@@ -134,7 +150,7 @@ body {
 }
 
 .customize-option .description {
-	color: var(--sub-color);
+	color: var(--main-color);
 	font-weight: normal;
 	margin-bottom: 0.6rem;
 }
@@ -143,26 +159,20 @@ body {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	margin-bottom: 4rem;
-}
-
-.category-typical-menu div {
-	width: auto;
-	flex: 1;
+	margin: 4rem auto;
 }
 
 .typical-img {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: stretch;
+
 	align-items: center;
 }
 
 .typical-img img {
-	max-width: 500px;
-	width: 100%;
+	max-width: 450px;
 	height: auto;
-
 }
 
 .typical-menu--name,
@@ -201,7 +211,7 @@ body {
 
 
 .please-note {
-	color: var(--warn-red);
+	color: var(--main-color);
 	font-size: 1.1rem;
 
 }
@@ -251,13 +261,13 @@ body {
 
 .img-container img {
 	max-height: 100%;
-	width: auto;
-	aspect-ratio: auto;
+	object-fit: contain;
 	object-position: center;
 }
 
 :not(.juices-and-drinks) .menu-panel {
 	transition: 0.3s;
+
 
 }
 
@@ -268,6 +278,7 @@ body {
 
 .juices-and-drinks .menu-panel {
 	transition: none;
+	box-shadow: none;
 }
 
 .juices-and-drinks .menu-panel:hover {
@@ -311,14 +322,11 @@ body {
 	gap: 0.2rem;
 }
 
-.optional--icons img {
-	margin: 0;
-}
-
 .teptip {
 	position: relative;
-	color: var(--panel-border);
+	color: var(--basic-text);
 	overflow: hidden;
+	margin-top: 4rem;
 }
 
 
@@ -345,10 +353,11 @@ body {
 
 .teptip>p:nth-child(2) {
 	left: 30%;
+	margin-bottom: 4rem;
 }
 
 .teptip div {
-	background-color: #fbfaf5;
+	background-color: #FFFEE9;
 	position: relative;
 	margin-top: 1em;
 	padding: 1em 1.5em;
@@ -356,13 +365,16 @@ body {
 	width: fit-content;
 }
 
-.teptip div h2 {
+.teptip-desc {
 	margin: 0;
 	font-size: 1.8em;
+	font-weight: bold;
+	color: var(--typical-color);
 }
 
 .teptip div p {
 	font-size: 1.2em;
+	margin: 0;
 }
 
 .teptip :nth-child(1 of div) {
@@ -429,7 +441,11 @@ svg {
 .modal-description {
 	position: absolute;
 	top: 50%;
+	box-sizing: border-box;
 	max-height: 20%;
+	padding-right: 2rem;
+	width: 50%;
+
 
 }
 
@@ -441,6 +457,7 @@ svg {
 	flex-direction: row;
 	gap: 2rem;
 	align-items: center;
+	margin-right: 2rem;
 }
 
 .ingredients img {
@@ -459,12 +476,15 @@ svg {
 .ingredients-field {
 	width: 60%;
 
+
 }
+
 
 .modal-img-container {
 	position: absolute;
-	inset: 1rem 10% 30% 50%;
+	inset: 2rem 2rem 30% 50%;
 	max-width: 50%;
+	display: flex;
 }
 
 .modal-img-container img {
@@ -475,6 +495,20 @@ svg {
 	object-position: center;
 	aspect-ratio: auto;
 
+}
+
+.modal-custom-icon {
+	position: absolute;
+	bottom: 30%;
+	right: 2rem;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.modal-custom-icon img {
+	max-width: 40px;
+	max-height: 40px;
 }
 
 .hide-button {

@@ -52,14 +52,17 @@ const NOODLE_MENU_LIST = [
 	{
 		imgPath: "./image/detail/noodle/thai_red_curry_rice_noodle.webp",
 		name: "Thai Red Curry Rice Noodles",
+		price: 120,
 	},
 	{
 		imgPath: "./image/detail/noodle/flat_rice_noodles.webp",
 		name: "Flat Rice Noodles",
+		price: 110,
 	},
 	{
 		imgPath: "./image/detail/noodle/IMG_1001.webp",
 		name: "Thai cold noodles",
+		price: 70,
 		substitute: false,
 	},
 ];
@@ -67,15 +70,18 @@ const VEGETABLE_MENU_LIST = [
 	{
 		imgPath: "./image/detail/vegetable/IMG_1021.webp",
 		name: "Thai squid salad",
+		price: 200,
 	},
 	{
 		imgPath: "./image/detail/vegetable/IMG_1019.webp",
-		name: "Stir‑fried water spinach/with shrimp paste",
+		name: "Stir-fried water spinach/with shrimp paste",
+		price: 110,
 		shrimp: true,
 	},
 	{
 		imgPath: "./image/detail/vegetable/IMG_1020.webp",
-		name: "Stir‑fried cabbage/with shrimp paste",
+		name: "Stir-fried cabbage/with shrimp paste",
+		price: 110,
 		shrimp: true,
 	},
 ];
@@ -83,26 +89,32 @@ const DRINK_MENU_LIST = [
 	{
 		imgPath: "image/detail/drink/b4f0b60f-1ef8-4d84-8228-77131f58faae.webp",
 		name: "Cranberry milk",
+		price: 100,
 	},
 	{
 		imgPath: "image/detail/drink/8982ad7f-6c80-491a-aab6-b4b58dda4faf.webp",
 		name: "Carrot juice",
+		price: 100,
 	},
 	{
 		imgPath: "image/detail/drink/87bb438c-87ce-47ab-bbe3-54d2a7985cc8.webp",
 		name: "Banana milk",
+		price: 80,
 	},
 	{
 		imgPath: "image/detail/drink/cbde49f4-4b97-49bf-91ea-bcad5cf89608.webp",
 		name: "Apple juice",
+		price: 100,
 	},
 	{
 		imgPath: "image/detail/drink/4c149504-e211-4f39-87bb-37f599c35ce4.webp",
 		name: "Mixed veggie & fruit juice",
+		price: 120,
 	},
 	{
 		imgPath: "image/detail/drink/7520321e-89f6-4359-9d4d-37d8e93093fe.webp",
 		name: "Thai milk tea",
+		price: 50,
 	},
 ];
 
