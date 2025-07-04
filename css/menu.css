@@ -1,120 +1,98 @@
 @charset "UTF-8";
 
 body {
-    background-color: #f5f0e1;
+    background-color: #ffffff;
     margin: 0;
-}
-
-.navi {
-    background-color: #940000;
-}
-
-.logo {
-    width: 30px;
-    height: 10px;
-}
-
-.logo img {
-    width: 100px;
-    height: 100px;
-    padding-left: 30px;
-}
-
-.site-nav {
-    display: flex;
-    justify-content: right;
-}
-
-.site-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    font-family: Calibri;
-    font-weight: bold;
-    font-size: 30px;
-    gap: 50px;
-    margin: 17px;
-    align-items: center;
-}
-
-.site-nav ul a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.site-nav ul img {
-    width: 40px;
-    height: 40px;
-}
-
-.site-nav ul p {
-    font-size: 15px;
-    margin: 0;
-}
-
-.site-nav li {
-    text-align: center;
 }
 
 /* menu */
+.menu {
+    background-image: url(../image/waterpaper1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f8f8f8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .menu h2 {
-    color: #940000;
+    color: #6B3D36;
     font-family: Calibri;
     font-size: 40px;
     font-weight: bold;
-    text-decoration: underline;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu h2::before {
+    content: "";
+    width: 136px;
+    height: 1px;
+    background-color: #6B3D36;
 }
 
 .menu img {
-    width: 700px;
+    width: 600px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
+.menu-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 500px;
+    height: 380px;
+}
+
+.text {
+    border-radius: 20px;
+    font-family: Calibri;
+    display: flex;
+    flex-direction: column;
+}
+
+.text h3 {
+    font-size: 45px;
+    margin: 0;
+}
+
+.text p {
+    font-size: 25px;
+    line-height: 1.8;
+    color: #6B3D36CC;
+}
+
+.button {
+    display: flex;
+    gap: 10px;
+}
+
+.button a {
+    color: #A56D35;
+    border: #A56D35 3px solid;
+    border-radius: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: Calibri;
+    padding: 5px 15px;
+    box-shadow: 2px 3px 3px rgb(136, 132, 132);
+}
+
+/* rice */
 .rice-noodle {
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
 }
 
-.menu-detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.text {
-    border-radius: 20px;
-    font-family: Calibri;
-}
-
-.text h3 {
-    font-size: 35px;
-}
-
-.text p {
-    font-size: 25px;
-    line-height: 1.8;
-}
-
 .rice-noodle-text {
-    background-color: #ffffff;
-    color: #F8A300;
-    width: 400px;
-    padding: 15px 25px;
+    color: #D3212C;
 }
 
-.button a {
-    color: #D6AC80;
-    border: #D6AC80 3px solid;
-    border-radius: 10px;
-    font-size: 30px;
-    background-color: #ffffff;
-    text-decoration: none;
-    font-family: Calibri;
-    padding: 5px 15px;
-}
-
+/* veggie */
 .vegetable-delights {
     display: flex;
     justify-content: space-evenly;
@@ -122,12 +100,10 @@ body {
 }
 
 .vegetable-delights-text {
-    background-color: #ffffff;
-    color: #92D050;
-    width: 400px;
-    padding: 15px 25px;
+    color: #007E39;
 }
 
+/* drink */
 .juice-drink {
     display: flex;
     justify-content: space-evenly;
@@ -136,52 +112,18 @@ body {
 }
 
 .juice-drink-text {
-    background-color: #ffffff;
-    color: #4B0082;
-    width: 400px;
-    height: 350px;
-    padding: 15px 25px;
+    color: #FF8C00;
 }
 
-/* Footer */
-.site-footer {
-     text-align: center;
-     font-family: Calibri;
-}
-
-.footer-info {
-    color: #ffffff;
-    background-color: #940000;
-    text-align: left;
-    padding-left: 175px;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-right {
-    display: flex;
-    gap: 30px;
-    padding-right: 15px;
-}
-
-.footer-right img {
-    width: 40px;
-    height: 40px;
-}
-
-.footer-copyright {
-    color: #595959;
-    margin-top: 20px;
-    font-size: 14px;
-    background-color: #f5f0e1;
-}
-
+/* back icon */
 .back-to-top {
     position: fixed;
     padding-right: 30px;
     bottom: 0;
     right: 0;
+}
+
+.back-to-top img {
+    position: absolute;
+    bottom: 125px;
 }
