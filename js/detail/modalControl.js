@@ -1,6 +1,6 @@
 const HIDE_CLASS = "hide-modal";
 const RICE_AND_NOODLE_COLOR_CLASS = "rice-and-noodle";
-const VEGI_COLOR_CLASS = "vegetable";
+const VEGI_COLOR_CLASS = "vegetable-delights";
 const MODAL_ID = "#modal";
 const DIV = document.querySelector(MODAL_ID);
 const TEXT_DIV = DIV.querySelector(".modal-contents");
@@ -26,7 +26,7 @@ function showModal(category, menu) {
 	PRICE.innerHTML = menu.price;
 	IMG.src = menu.imgPath;
 
-	//要変更
+	//TBR.
 	DESC.innerHTML = DESC.innerHTML;
 	INGREDIENT.innerHTML = INGREDIENT.innerHTML;
 
@@ -59,7 +59,8 @@ function hideModal() {
 }
 DIV.querySelector(".hide-button").addEventListener("click", hideModal);
 
-//モーダルの外をクリックしたときに消したいならここのコメント外す
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//モーダルの外をクリックした場合にも消したいなら、以下のコメントを外す
 
 // document.addEventListener("click", (event) => {
 // 	if (isIgnoreNext) {

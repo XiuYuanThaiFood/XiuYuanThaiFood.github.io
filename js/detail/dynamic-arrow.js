@@ -49,8 +49,6 @@ function dynamicArrow(sx, sy, ex, ey) {
 			`${t1x},${t1y} ${t2x},${t2y} ${t3x},${t3y} `
 		);
 	}
-	svg.appendChild(triangle);
-	document.querySelector("body").append(svg);
 }
 
 dynamicArrow(20, 15, 300, 200);
