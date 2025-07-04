@@ -10,10 +10,10 @@ body {
     font-family: Calibri;
     font-size: 40px;
     font-weight: bold;
-    text-decoration: underline;
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: 0;
 }
 
 .section-title::before {
@@ -23,8 +23,13 @@ body {
     background-color: #6B3D36;
 }
 
+.about {
+    background-color: #f5f0e1;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
 .about-box {
-    background-color: #D6AC80CC;
     display: flex;
     justify-content: center;
     height: 400px;
@@ -47,10 +52,6 @@ body {
     width: 320px;
 }
 
-.about-detail {
-    margin-left: 100px;
-}
-
 .about-detail p {
     color: #333333;
     font-family: Calibri;
@@ -61,7 +62,6 @@ body {
 }
 
 .about-slogan {
-    background-color: #CE726866;
     margin: 0 0 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -70,7 +70,7 @@ body {
 }
 
 .about-slogan p {
-    color: #ffffff;
+    color: #333333;
     font-size: 30px;
     font-style: italic;
     text-indent: 4em;

@@ -8,7 +8,6 @@ body {
 .wrapper {
     display: flex;
     position: relative;
-    padding-bottom: 40px;
     align-items: center;
     justify-content: center;
     color: #ffffff;
@@ -20,12 +19,16 @@ body {
 }
 
 .wrapper-text {
-    padding: 10px;
     color: #521E15;
     font-family: Calibri;
     letter-spacing: 0.1em;
     margin: 0;
     font-size: 30px;
+    padding: 30px 0 30px 100px;
+}
+
+.wrapper-text h1 {
+    margin: 0;
 }
 
 .weekly-special {
