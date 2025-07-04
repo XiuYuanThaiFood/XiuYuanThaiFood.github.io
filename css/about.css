@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.section-title {
+    color: #6B3D36;
+    font-family: Calibri;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.section-title::before {
+    content: "";
+    width: 136px;
+    height: 1px;
+    background-color: #6B3D36;
+}
+
+.about {
+    background-color: #f5f0e1;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
+.about-box {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+    width: 90%;
+}
+
+.about-logo {
+    background-color: #ffffff;
+    width: 400px;
+    height: 270px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.about-logo img {
+    width: 320px;
+}
+
+.about-detail p {
+    color: #333333;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 1.5;
+    width: 400px;
+}
+
+.about-slogan {
+    margin: 0 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    letter-spacing: 2px;
+}
+
+.about-slogan p {
+    color: #333333;
+    font-size: 30px;
+    font-style: italic;
+    text-indent: 4em;
+    text-shadow: 1px 1px #333333;
+}
+
+/* contact */
+.contact {
+    color: #6B3D36;
+}
+
+.contact .section-title {
+    padding: 50px 0 40px 0px ;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+}
+
+.map iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+.contact-info {
+    display: flex;
+    background-color: #CE7268;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.contact-info-icons {
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    height: 25px;
+    gap: 10px;
+    padding-top: 12px;
+    padding-right: 10px;
+}
+
+.contact-info-text {
+    text-align: left;
+    font-family: Calibri;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.inquiry {
+    display: flex;
+    justify-content: center;
+}
+
+.inquiry .button {
+    color: #940000;
+    border: #940000 3px solid;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 2px;
+}
+
+.back-to-top {
+    position: sticky;
+    padding-right: 30px;
+    bottom: 0;
+    right: 0;
+    left: 100%;
+}
