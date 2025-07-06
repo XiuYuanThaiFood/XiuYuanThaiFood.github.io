@@ -20,7 +20,6 @@ body {
 
 .wrapper-text {
     color: #521E15;
-    font-family: Calibri;
     letter-spacing: 0.1em;
     margin: 0;
     font-size: 30px;
@@ -31,6 +30,7 @@ body {
     margin: 0;
 }
 
+/* weekly */
 .weekly-special {
     display: flex;
     gap: 40px;
@@ -39,7 +39,25 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #f8f8f8;
+    font-family: Calibri;
 } 
+
+h2 {
+    color: #6B3D36;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+h2::before {
+    content: "";
+    width: 258px;
+    height: 1px;
+    background-color: #6B3D36;
+}
 
 .weekly-special > div {
     width: 50%;
@@ -51,32 +69,21 @@ body {
     align-items: flex-end;
 }
 
-.weekly-special h2 {
-    color: #6B3D36;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-.menu-name {
-    color: #f8a300;
-    font-size: 42px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.weekly-special a {
-    margin-left: 30px;
-    color: #f8a300;
-}
-
 .introduction {
     color: #8B5E3C;
     width: 300px;
     font-weight: bold;
     line-height: 1.8;
     margin-bottom: 0;
+}
+
+.introduction a {
+    margin-left: 30px;
+    color: #333333;
+}
+
+.introduction a:hover {
+    color: #f8a300;
 }
 
 .weekly-special img {
@@ -88,38 +95,47 @@ body {
 }
 
 .special-menu {
-    padding-right: 140px;
+    padding-right: 50px;
 }
 
-.special-menu > div {
-    color: #f8a300;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.special-menu p {
-    color: #f8a300;
-    font-family: Calibri;
+.menu-name {
+    font-size: 28px;
     font-weight: bold;
-    font-size: 25px;
+    color: #e07b00;
+    letter-spacing: 2px;
+    user-select: none;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(82, 30, 21, 0.6);
 }
 
-.special-menu > p {
-    text-align: center;
-    font-size: 65px;
-    margin: 5px;
+.spark {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff8c00, #d28e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bounce 1.4s ease-in-out infinite;
 }
 
+/* 彈跳動畫 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* menu-slide */
 .menu {
     text-align: center;
     padding: 1em 0;
-}
-
-.menu h2 {
-    color: #6B3D36;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 40px;
 }
 
 .menu .swiper-slide img {
@@ -184,6 +200,7 @@ body {
     text-align: left;
 }
 
+/*左右按鈕
 .swiper-button-next::after,
 .swiper-button-prev::after {
     display: none;
@@ -211,6 +228,7 @@ body {
 .swiper-button-next img {
      width: 40px;
 }
+*/
 
 /* backtop */
 .back-to-top {
@@ -221,7 +239,12 @@ body {
     left: 100%;
 }
 
-@media screen and (max-width: 600px) {
+.back-to-top img {
+    width: 12px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
     .wrapper img {
         width: 100vw;
         height: auto;
@@ -235,62 +258,26 @@ body {
     }
 
     .weekly-special {
-        flex-direction: column;
-        background-attachment: scroll; 
-        padding: 20px 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
     }
 
-    .weekly-special > div {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
+  .weekly-special > div {
+    width: 100%;
+    text-align: center;
     }
 
-    .weekly-special > div:first-child {
-        align-items: center;
+  .introduction {
+    width: auto;
+    padding: 0 10px;
     }
 
-    .weekly-special h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .menu-name {
-        font-size: 28px;
-    }
-
-    .weekly-special a {
-        margin-left: 0;
-    }
-
-    .introduction {
-        width: 100%;
-        padding: 0 10px;
-        font-weight: normal;
-        line-height: 1.4;
-        margin-bottom: 20px;
-    }
-
-    .weekly-special img {
-        width: 80%;
-        height: auto;
-        margin: 0 auto 30px auto;
-    }
-
-    .special-menu {
-        padding-right: 0;
-    }
-
-    .special-menu > div {
-        justify-content: center;
-    }
-
-    .special-menu p {
-        font-size: 18px;
-    }
-
-    .special-menu > p {
-        font-size: 36px;
+  .weekly-special img {
+    width: 80%;
+    height: auto;
+    transform: none;
+    margin: 20px 0;
     }
 
     /* Menu Section */

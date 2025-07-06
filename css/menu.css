@@ -6,16 +6,6 @@ body {
 }
 
 /* menu */
-.menu {
-    background-image: url(../image/waterpaper1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #f8f8f8;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .menu h2 {
     color: #6B3D36;
     font-family: Calibri;
@@ -34,7 +24,8 @@ body {
 }
 
 .menu img {
-    width: 600px;
+    width: 450px;
+    border-radius: 10px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -43,24 +34,25 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    width: 500px;
+    width: 380px;
     height: 380px;
 }
 
 .text {
-    border-radius: 20px;
     font-family: Calibri;
     display: flex;
     flex-direction: column;
+    width: 300px;
 }
 
 .text h3 {
-    font-size: 45px;
+    font-size: 30px;
     margin: 0;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .text p {
-    font-size: 25px;
+    font-size: 18px;
     line-height: 1.8;
     color: #6B3D36CC;
 }
@@ -71,8 +63,8 @@ body {
 }
 
 .button a {
-    color: #A56D35;
     border: #A56D35 3px solid;
+    background-color: #ffffff;
     border-radius: 10px;
     font-size: 15px;
     text-decoration: none;
@@ -81,49 +73,68 @@ body {
     box-shadow: 2px 3px 3px rgb(136, 132, 132);
 }
 
+.button a:hover
+{
+    color: #59595966;
+}
+
 /* rice */
 .rice-noodle {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .rice-noodle-text {
     color: #D3212C;
 }
 
+.red a {
+    color: #D3212C;
+}
+
 /* veggie */
 .vegetable-delights {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .vegetable-delights-text {
     color: #007E39;
 }
 
+.green a {
+    color: #007E39;
+}
+
 /* drink */
 .juice-drink {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .juice-drink-text {
     color: #FF8C00;
 }
 
-/* back icon */
+.orange a {
+    color: #FF8C00;
+}
+
+/* backtop */
 .back-to-top {
-    position: fixed;
+    position: sticky;
     padding-right: 30px;
     bottom: 0;
     right: 0;
+    left: 100%;
 }
 
 .back-to-top img {
+    width: 12px;
+    height: auto;
     position: absolute;
-    bottom: 125px;
+    bottom: 12px;
 }
