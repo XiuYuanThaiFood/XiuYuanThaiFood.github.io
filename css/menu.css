@@ -47,13 +47,27 @@ body {
     width: 300px;
 }
 
-.text h3 {
+.category-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-name h3 {
     font-size: 30px;
     margin: 0;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.text p {
+.category-name:nth-child(n+3) {
+    margin-top: 50px;
+}
+
+.category-name:last-child {
+    margin-bottom: 30px;
+}
+
+.text {
     font-size: 18px;
     line-height: 1.8;
     color: #6B3D36CC;
@@ -82,46 +96,16 @@ body {
 
 /* rice */
 .rice-noodle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rice-noodle-text {
-    color: #D3212C;
-}
-
-.red a {
     color: #D3212C;
 }
 
 /* veggie */
 .vegetable-delights {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.vegetable-delights-text {
-    color: #007E39;
-}
-
-.green a {
     color: #007E39;
 }
 
 /* drink */
 .juice-drink {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.juice-drink-text {
-    color: #FF8C00;
-}
-
-.orange a {
     color: #FF8C00;
 }
 
@@ -151,22 +135,41 @@ body {
     }
 
     .menu img {
-        width: 80%;
+        width: 70%;
         height: auto;
     }
-    .rice-noodle {
-        max-width: 100%;
-        padding: 0px 80px;
+
+    .menu-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 380px;
+        height: auto;
+        align-items: center;
+        margin-top: 10px;
     }
 
-    .vegetable-delights {
-        max-width: 100%;
-        padding: 0px 80px;
+    .category-name {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .juice-drink {
-        max-width: 100%;
-        padding: 0px 80px;
+    .category-name a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .category-name:nth-child(n+3) {
+        margin-top: 90px;
+    }
+
+    .rice-noodle,
+    .vegetable-delights,
+    .juice-drink,
+    .text {
+        text-align: center;
     }
 
     .back-to-top {
@@ -179,5 +182,4 @@ body {
         width: auto;
         height: 60px;
     }
-
 }

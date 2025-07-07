@@ -299,6 +299,23 @@ h2::before {
         margin: 15px 0;
     }
 
+    h2::before {
+        width: 58px;
+    }
+
+    .weekly-special-container {
+        flex-direction: column;
+    }
+
+    .special-menu {
+        width: 60%;
+    }
+
+    .menu-item {
+        width: 80%;
+        align-items: center;
+    }
+
     .menu-section h2 {
         font-size: 24px;
     }
@@ -319,6 +336,10 @@ h2::before {
         letter-spacing: 0;
     }
 
+    .menu-name img {
+        width: 60%;
+    }
+
     .back-to-top {
         position: sticky;
         bottom: 20px;
@@ -330,4 +351,7 @@ h2::before {
         height: 60px;
     }
 
+    .swiper-slide p:nth-child(2) {
+        height: 4em;
+    }
 }

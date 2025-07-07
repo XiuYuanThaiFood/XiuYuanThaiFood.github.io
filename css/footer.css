@@ -49,7 +49,7 @@
     width: 25px;
     height: 25px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     /* Footer調整 */
     .footer-info {
         flex-direction: column;
@@ -58,13 +58,21 @@
         text-align: center;
     }
 
-    .footer-left, .footer-right {
+    .footer-right {
         padding: 10px 0;
         text-align: center;
+    }
+
+    .footer-left {
+        padding-top: 10px;
     }
 
     .icons {
         justify-content: center;
         gap: 15px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
     }
 }
