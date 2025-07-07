@@ -57,7 +57,6 @@ function showModal(category, menu) {
 		menu.substitute === false
 			? "image/detail/icons/yu_icon-17.png"
 			: "image/detail/icons/yu_icon-14.png";
-	console.log();
 }
 function hideModal() {
 	DIV.classList.add(HIDE_CLASS);
