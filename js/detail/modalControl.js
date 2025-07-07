@@ -14,6 +14,7 @@ const ICON_DIV = DIV.querySelector(".modal-custom.icon");
 const SUBSTITUTE_ICON = document.querySelector("#modal-substitute-icon");
 const OPTION_ICON = document.querySelector("#modal-select-icon");
 let isIgnoreNext = false;
+
 function showModal(category, menu) {
 	DIV.classList.remove(
 		HIDE_CLASS,
@@ -26,7 +27,9 @@ function showModal(category, menu) {
 	PRICE.innerHTML = menu.price;
 	IMG.src = menu.imgPath;
 
-	//TBR
+	/*TBR
+	listup.jsに直接追加してもらうか、配列を作った後変更してほしいです
+	*/
 	DESC.innerHTML = DESC.innerHTML;
 	INGREDIENT.innerHTML = INGREDIENT.innerHTML;
 
@@ -64,7 +67,7 @@ DIV.querySelector(".hide-button").addEventListener("click", hideModal);
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //モーダルの外をクリックした場合にも消したいなら、以下のコメントを外す
-
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // document.addEventListener("click", (event) => {
 // 	if (isIgnoreNext) {
 // 		isIgnoreNext = false;
