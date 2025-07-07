@@ -252,35 +252,17 @@ h2::before {
 }
 
 @media screen and (max-width:768px) {
-    .navi {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0;
-    }
-
-    .site-nav {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .site-nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .wrapper {
-        margin-top: 500px;
-    }
-
     .wrapper img {
         width: 100%;
         height: auto;
+    }
+
+    .wrapper-text {
+    padding: 30px 0;
+    }
+
+    .weekly-special-container {
+        margin-top: 0;
     }
 
     .wrapper-text h1 {
@@ -291,9 +273,8 @@ h2::before {
     }
 
     .weekly-special {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+    flex-direction: column;
+    padding-bottom: 20px;
     }
 
   .weekly-special > div {
@@ -314,6 +295,10 @@ h2::before {
     }
 
     /* Menu Section */
+    h2 {
+        margin: 15px 0;
+    }
+
     .menu-section h2 {
         font-size: 24px;
     }
@@ -330,11 +315,19 @@ h2::before {
         justify-content: center;
     }
 
+    .menu-name {
+        letter-spacing: 0;
+    }
+
     .back-to-top {
-        position: fixed;
+        position: sticky;
         bottom: 20px;
         right: 20px;
-        padding-right: 0;
+    }
+
+    .back-to-top img {
+        width: auto;
+        height: 60px;
     }
 
 }

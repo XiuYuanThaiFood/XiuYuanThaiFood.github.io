@@ -27,6 +27,8 @@ body {
     width: 450px;
     border-radius: 10px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #d6ac80;
+    padding: 1em;
 }
 
 .menu-detail {
@@ -137,4 +139,37 @@ body {
     height: auto;
     position: absolute;
     bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu img {
+        width: 80%;
+        height: auto;
+    }
+    .rice-noodle {
+        max-width: 100%;
+        padding: 0px 80px;
+    }
+
+    .vegetable-delights {
+        max-width: 100%;
+        padding: 0px 80px;
+    }
+
+    .juice-drink {
+        max-width: 100%;
+        padding: 0px 80px;
+    }
+
+    .back-to-top {
+        position: sticky;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .back-to-top img {
+        width: auto;
+        height: 60px;
+    }
+
 }

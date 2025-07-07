@@ -160,3 +160,39 @@ body {
     position: absolute;
     bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+.about {
+    padding: 50px 0;
+}
+
+.section-title {
+    padding-bottom: 20px;
+}
+
+.about-box {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-text {
+    padding-left: 146px;
+}
+
+.about-logo {
+    margin: auto;
+}
+
+.back-to-top {
+        position: sticky;
+        bottom: 20px;
+        right: 20px;
+    }
+
+.back-to-top img {
+        width: auto;
+        height: 60px;
+    }
+}
