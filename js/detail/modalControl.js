@@ -33,7 +33,10 @@ function showModal(category, menu) {
 	switch (String(category)) {
 		case "rice-list":
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
-			OPTION_ICON.src = "image/detail/icons/yu_icon-24.png";
+			OPTION_ICON.src =
+				menu.substitute === false
+					? "image/detail/icons/yu_icon-25.png"
+					: "image/detail/icons/yu_icon-24.png";
 			break;
 		case "noodle-list":
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
