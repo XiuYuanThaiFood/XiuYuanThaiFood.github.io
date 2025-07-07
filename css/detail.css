@@ -112,16 +112,17 @@ hr {
 	display: flex;
 	padding: 0 1rem;
 	flex-direction: column;
+	width: stretch;
 	justify-content: space-between;
 }
 
 .customize-inner-segment .sub-custimize-block:nth-child(1 of .sub-custimize-block),
 .customize-inner-segment .sub-custimize-block:nth-child(2 of .sub-custimize-block) {
-	width: max(90%, 37.5vw);
+	width: max(100%, 37.5vw);
 }
 
 .customize-inner-segment .sub-custimize-block:nth-child(3 of .sub-custimize-block) {
-	width: max(90%, 25vw);
+	width: max(100%, 25vw);
 }
 
 .customize-option {
@@ -157,7 +158,7 @@ hr {
 
 .spice-graph .with-description {
 	position: relative;
-	left: 5rem;
+	left: min(25%, 5rem);
 }
 
 .spice-graph>img {
