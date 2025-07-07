@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper img {
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
@@ -33,14 +33,21 @@ body {
 /* weekly */
 .weekly-special {
     display: flex;
-    gap: 40px;
     background-image: url(../image/waterpaper2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #f8f8f8;
     font-family: Calibri;
-} 
+    flex-direction: column;
+}
+
+.weekly-special-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -60px;
+}
 
 h2 {
     color: #6B3D36;
@@ -59,10 +66,6 @@ h2::before {
     background-color: #6B3D36;
 }
 
-.weekly-special > div {
-    width: 50%;
-}
-
 .weekly-special > div:first-child {
     display: flex;
     flex-direction: column;
@@ -75,6 +78,8 @@ h2::before {
     font-weight: bold;
     line-height: 1.8;
     margin-bottom: 0;
+    font-size: 20px;
+    padding-right: 25px;
 }
 
 .introduction a {
@@ -87,7 +92,7 @@ h2::before {
 }
 
 .weekly-special img {
-    width: 60%;
+    width: 50%;
     height: 50%;
     transform: rotate(-8deg);
     margin-top: 60px;
@@ -95,11 +100,11 @@ h2::before {
 }
 
 .special-menu {
-    padding-right: 50px;
+    width: 50%;
 }
 
 .menu-name {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     color: #e07b00;
     letter-spacing: 2px;
@@ -130,6 +135,8 @@ h2::before {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 50%;
+    padding-right: 30px;
 }
 
 /* menu-slide */
@@ -244,9 +251,35 @@ h2::before {
     height: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
+    .navi {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .site-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .wrapper {
+        margin-top: 500px;
+    }
+
     .wrapper img {
-        width: 100vw;
+        width: 100%;
         height: auto;
     }
 
@@ -258,9 +291,9 @@ h2::before {
     }
 
     .weekly-special {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
   .weekly-special > div {
