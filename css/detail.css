@@ -117,11 +117,11 @@ hr {
 
 .customize-inner-segment .sub-custimize-block:nth-child(1 of .sub-custimize-block),
 .customize-inner-segment .sub-custimize-block:nth-child(2 of .sub-custimize-block) {
-	width: 37.5%;
+	width: max(90%, 37.5vw);
 }
 
 .customize-inner-segment .sub-custimize-block:nth-child(3 of .sub-custimize-block) {
-	width: 25%;
+	width: max(90%, 25vw);
 }
 
 .customize-option {
@@ -237,7 +237,6 @@ hr {
 
 .typical-menu--name {
 	font-size: 2rem;
-	;
 }
 
 .typical-menu--description {
@@ -573,11 +572,15 @@ svg {
 	cursor: pointer;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:850px) {
 
 	.customize-inner-segment,
 	.category-typical-menu {
 		flex-direction: column;
+	}
+
+	.category-typical-menu {
+		padding: 1rem;
 	}
 
 	.category-typical-menu img {
@@ -588,9 +591,17 @@ svg {
 		transform: 0;
 	}
 
+	.inv-flex {
+		flex-direction: column-reverse !important;
+	}
+
 	.preview-img,
 	.customize-option {
 		width: 90%;
+	}
+
+	.img-list {
+		gap: 1rem;
 	}
 
 	.teptip {
