@@ -277,12 +277,12 @@ h2::before {
     padding-bottom: 20px;
     }
 
-  .weekly-special > div {
+   .weekly-special > div {
     width: 100%;
     text-align: center;
     }
 
-  .introduction {
+   .introduction {
     width: auto;
     padding: 0 10px;
     }
