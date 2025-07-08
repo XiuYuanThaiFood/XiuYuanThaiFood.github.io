@@ -1,186 +1,185 @@
 @charset "UTF-8";
 
 body {
-    background-color: #ffffff;
-    margin: 0;
+	background-color: #ffffff;
+	margin: 0;
 }
 
 /* menu */
 .menu h2 {
-    color: #6B3D36;
-    font-family: Calibri;
-    font-size: 40px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+	color: #6B3D36;
+	font-family: Calibri;
+	font-size: 40px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .menu h2::before {
-    content: "";
-    width: 136px;
-    height: 1px;
-    background-color: #6B3D36;
+	content: "";
+	width: 136px;
+	height: 1px;
+	background-color: #6B3D36;
 }
 
 .menu img {
-    width: 450px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-    border: 1px solid #d6ac80;
-    padding: 1em;
+	width: 450px;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+	border: 1px solid #d6ac80;
+	padding: 1em;
 }
 
 .menu-detail {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    width: 380px;
-    height: 380px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	width: 380px;
+	height: 380px;
 }
 
 .text {
-    font-family: Calibri;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+	font-family: Calibri;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
 }
 
 .category-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .category-name h3 {
-    font-size: 30px;
-    margin: 0;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+	font-size: 30px;
+	margin: 0;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .category-name:nth-child(n+3) {
-    margin-top: 50px;
+	margin-top: 50px;
 }
 
 .category-name:last-child {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .text {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #6B3D36CC;
+	font-size: 18px;
+	line-height: 1.8;
+	color: #6B3D36CC;
 }
 
 .button {
-    display: flex;
-    gap: 10px;
+	display: flex;
+	gap: 10px;
 }
 
 .button a {
-    border: #A56D35 3px solid;
-    background-color: #ffffff;
-    border-radius: 10px;
-    font-size: 15px;
-    text-decoration: none;
-    font-family: Calibri;
-    padding: 5px 15px;
-    box-shadow: 2px 3px 3px rgb(136, 132, 132);
+	border: #A56D35 3px solid;
+	background-color: #ffffff;
+	border-radius: 10px;
+	font-size: 15px;
+	text-decoration: none;
+	font-family: Calibri;
+	padding: 5px 15px;
+	box-shadow: 2px 3px 3px rgb(136, 132, 132);
 }
 
-.button a:hover
-{
-    color: #59595966;
+.button a:hover {
+	color: #59595966;
 }
 
 /* rice */
 .rice-noodle {
-    color: #D3212C;
+	color: #D3212C;
 }
 
 /* veggie */
 .vegetable-delights {
-    color: #007E39;
+	color: #007E39;
 }
 
 /* drink */
 .juice-drink {
-    color: #FF8C00;
+	color: #FF8C00;
 }
 
 /* backtop */
 .back-to-top {
-    position: sticky;
-    padding-right: 30px;
-    bottom: 0;
-    right: 0;
-    left: 100%;
+	position: sticky;
+	padding-right: 30px;
+	bottom: 0;
+	right: 0;
+	left: 100%;
 }
 
 .back-to-top img {
-    width: 12px;
-    height: auto;
-    position: absolute;
-    bottom: 12px;
+	width: 12px;
+	height: auto;
+	position: absolute;
+	bottom: 12px;
 }
 
 @media screen and (max-width: 768px) {
-    .menu {
-        margin-top: 30px;
-    }
+	.menu {
+		margin-top: 30px;
+	}
 
-    .menu h2 {
-        padding: 0;
-    }
+	.menu h2 {
+		padding: 0;
+	}
 
-    .menu img {
-        width: 70%;
-        height: auto;
-    }
+	.menu img {
+		width: 70%;
+		height: auto;
+	}
 
-    .menu-detail {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 380px;
-        height: auto;
-        align-items: center;
-        margin-top: 10px;
-    }
+	.menu-detail {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 380px;
+		height: auto;
+		align-items: center;
+		margin-top: 10px;
+	}
 
-    .category-name {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
+	.category-name {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .category-name a {
-        display: flex;
-        justify-content: center;
-    }
+	.category-name a {
+		display: flex;
+		justify-content: center;
+	}
 
-    .category-name:nth-child(n+3) {
-        margin-top: 90px;
-    }
+	.category-name:nth-child(n+3) {
+		margin-top: 90px;
+	}
 
-    .rice-noodle,
-    .vegetable-delights,
-    .juice-drink,
-    .text {
-        text-align: center;
-    }
+	.rice-noodle,
+	.vegetable-delights,
+	.juice-drink,
+	.text {
+		text-align: center;
+	}
 
-    .back-to-top {
-        position: sticky;
-        bottom: 20px;
-        right: 20px;
-    }
+	.back-to-top {
+		position: sticky;
+		bottom: 20px;
+		right: 20px;
+	}
 
-    .back-to-top img {
-        width: auto;
-        height: 60px;
-    }
+	.back-to-top img {
+		width: auto;
+		height: 60px;
+	}
 }
