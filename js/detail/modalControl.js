@@ -37,9 +37,9 @@ function showModal(category, menu) {
 		case "rice-list":
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
 			OPTION_ICON.src =
-				menu.substitute === false
-					? "image/detail/icons/yu_icon-25.png"
-					: "image/detail/icons/yu_icon-24.png";
+				"image/detail/icons/yu_icon-" +
+				(menu.substitute === false ? 25 : 24) +
+				".png";
 			break;
 		case "noodle-list":
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
@@ -47,16 +47,17 @@ function showModal(category, menu) {
 			break;
 		case "vegetable-list":
 			DIV.classList.add(VEGE_COLOR_CLASS);
-			OPTION_ICON.src = "image/detail/icons/yu_icon-26.png";
+			OPTION_ICON.src =
+				"image/detail/icons/yu_icon-" + (menu.shrimp ? 26 : 29) + ".png";
 			break;
 		default:
 			return;
 	}
 
 	SUBSTITUTE_ICON.src =
-		menu.substitute === false
-			? "image/detail/icons/yu_icon-17.png"
-			: "image/detail/icons/yu_icon-14.png";
+		"image/detail/icons/yu_icon-" +
+		(menu.substitute === false ? 17 : 14) +
+		".png";
 }
 function hideModal() {
 	DIV.classList.add(HIDE_CLASS);
