@@ -95,6 +95,7 @@ hr {
 .customize-inner-segment {
 	display: flex;
 	flex: 1;
+	gap: 1rem;
 }
 
 .customize-inner-segment hr {
@@ -105,7 +106,7 @@ hr {
 	box-sizing: border-box;
 }
 
-.sub-custimize-block {
+.sub-customize-block {
 	display: flex;
 	padding: 0 1rem;
 	flex-direction: column;
@@ -113,13 +114,13 @@ hr {
 	justify-content: space-between;
 }
 
-.customize-inner-segment .sub-custimize-block:nth-child(1 of .sub-custimize-block),
-.customize-inner-segment .sub-custimize-block:nth-child(2 of .sub-custimize-block) {
-	width: max(100%, 37.5vw);
+.sub-customize-block:nth-child(1 of .sub-customize-block),
+.sub-customize-block:nth-child(2 of .sub-customize-block) {
+	width: 37.5vw;
 }
 
-.customize-inner-segment .sub-custimize-block:nth-child(3 of .sub-custimize-block) {
-	width: max(100%, 25vw);
+.sub-customize-block:nth-child(3 of .sub-customize-block) {
+	width: 25vw;
 }
 
 .customize-option {
@@ -168,7 +169,7 @@ hr {
 	align-items: center;
 }
 
-.sub-custimize-block>.customize-option>.head {
+.sub-customize-block>.customize-option>.head {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -180,11 +181,11 @@ hr {
 .customize-option .head .choice-meat {
 	display: flex;
 	flex-direction: column;
-	margin-left: 2rem;
+	margin: 0 1rem;
 }
 
-.customize-option .head img {
-	margin-right: 2rem;
+.choice-meat img {
+	margin: auto;
 }
 
 .customize-option .description {
@@ -249,9 +250,9 @@ hr {
 	width: fit-content
 }
 
-.with-description > img,
-.rice-and-noodle .sub-custimize-block .head > img,
-.typical-menu--name > img {
+.with-description>img,
+.rice-and-noodle .sub-customize-block .head>img,
+.typical-menu--name>img {
 	width: 50px;
 	height: 50px;
 	object-fit: contain;
@@ -278,7 +279,7 @@ hr {
 
 .img-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, calc(1280px*0.26));
+	grid-template-columns: repeat(auto-fill, calc(1280px*0.25));
 	justify-content: center;
 	gap: 4rem 2rem;
 	margin: 0 5rem;
@@ -311,6 +312,7 @@ hr {
 }
 
 :not(.juices-and-drinks) .menu-panel {
+	border-radius: 1rem;
 	transition: 0.3s;
 }
 
@@ -320,6 +322,7 @@ hr {
 }
 
 .juices-and-drinks .menu-panel {
+	border-radius: 0;
 	transition: none;
 	box-shadow: none;
 }
@@ -433,7 +436,7 @@ svg {
 }
 
 .hide-modal {
-	display: none;
+	display: none !important;
 }
 
 .modal {
@@ -477,6 +480,7 @@ svg {
 	box-sizing: border-box;
 	padding: 0.1rem 0.4rem;
 	font-size: 1.5rem;
+	font-weight: 600;
 }
 
 .modal-description {
@@ -549,10 +553,27 @@ svg {
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
+	z-index: 10;
 }
 
 .hide-button:hover {
 	cursor: pointer;
+}
+
+/* backtop */
+.back-to-top {
+	position: sticky;
+	padding-right: 30px;
+	bottom: 0;
+	right: 0;
+	left: 100%;
+}
+
+.back-to-top img {
+	width: 12px;
+	height: auto;
+	position: absolute;
+	bottom: 10px;
 }
 
 @media screen and (max-width:850px) {
@@ -574,6 +595,10 @@ svg {
 		transform: 0;
 	}
 
+	.customize-segment .customize-inner-segment .sub-customize-block {
+		width: 100%;
+	}
+
 	.inv-flex {
 		flex-direction: column-reverse !important;
 	}
@@ -584,7 +609,7 @@ svg {
 	}
 
 	.img-list {
-		gap: 1rem;
+		gap: 2rem;
 	}
 
 	.teptip {
@@ -607,5 +632,76 @@ svg {
 
 	.juices-and-drinks>p {
 		left: 0;
+	}
+
+}
+
+@media screen and (max-width:500px) {
+	.modal {
+		height: 600px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.modal-img-container {
+		position: static;
+		align-self: center;
+		height: 30%;
+		margin-top: 1rem;
+		width: auto;
+		inset: 0;
+	}
+
+	.modal-custom-icon {
+		right: 10%;
+		top: 35%;
+	}
+
+	.modal-contents {
+		padding: 0.4rem;
+
+	}
+
+	.modal-title {
+		position: static;
+		max-width: 90%;
+	}
+
+	.modal-price {
+		position: static;
+		font-size: 1.4rem;
+	}
+
+	.modal-description {
+		position: static;
+		width: 100%;
+	}
+
+	.ingredients {
+		position: static;
+		display: grid;
+		gap: 0;
+		margin-top: 1rem;
+		grid-template-columns: 30% 70%;
+		grid-template-rows: 30% 70%;
+	}
+
+	.ingredients img {
+		grid-column: 1/2;
+		grid-row: 1/2;
+		padding: 0.5rem;
+		width: auto;
+		height: auto;
+	}
+
+	.key-ingredients {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	.ingredients-field {
+		grid-column: 1/3;
+		grid-row: 2/3;
+		width: 100%;
 	}
 }

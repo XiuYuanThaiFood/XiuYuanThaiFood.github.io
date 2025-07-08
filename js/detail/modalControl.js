@@ -1,6 +1,6 @@
 const HIDE_CLASS = "hide-modal";
 const RICE_AND_NOODLE_COLOR_CLASS = "rice-and-noodle";
-const VEGI_COLOR_CLASS = "vegetable-delights";
+const VEGE_COLOR_CLASS = "vegetable-delights";
 const MODAL_ID = "#modal";
 const DIV = document.querySelector(MODAL_ID);
 const TEXT_DIV = DIV.querySelector(".modal-contents");
@@ -14,19 +14,22 @@ const ICON_DIV = DIV.querySelector(".modal-custom.icon");
 const SUBSTITUTE_ICON = document.querySelector("#modal-substitute-icon");
 const OPTION_ICON = document.querySelector("#modal-select-icon");
 let isIgnoreNext = false;
+
 function showModal(category, menu) {
 	DIV.classList.remove(
 		HIDE_CLASS,
 		RICE_AND_NOODLE_COLOR_CLASS,
-		VEGI_COLOR_CLASS
+		VEGE_COLOR_CLASS
 	);
 	isIgnoreNext = true;
 
 	TITLE.innerHTML = menu.name;
 	PRICE.innerHTML = menu.price;
 	IMG.src = menu.imgPath;
-
-	//TBR
+	IMG.alt = "picture of " + menu.name;
+	/*TBR
+	listup.jsに直接追加してもらうか、配列を作った後変更してほしいです
+	*/
 	DESC.innerHTML = DESC.innerHTML;
 	INGREDIENT.innerHTML = INGREDIENT.innerHTML;
 
@@ -34,27 +37,27 @@ function showModal(category, menu) {
 		case "rice-list":
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
 			OPTION_ICON.src =
-				menu.substitute === false
-					? "image/detail/icons/yu_icon-25.png"
-					: "image/detail/icons/yu_icon-24.png";
+				"image/detail/icons/yu_icon-" +
+				(menu.substitute === false ? 25 : 24) +
+				".png";
 			break;
 		case "noodle-list":
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
 			OPTION_ICON.src = "image/detail/icons/yu_icon-30.png";
 			break;
 		case "vegetable-list":
-			DIV.classList.add(VEGI_COLOR_CLASS);
-			OPTION_ICON.src = "image/detail/icons/yu_icon-26.png";
+			DIV.classList.add(VEGE_COLOR_CLASS);
+			OPTION_ICON.src =
+				"image/detail/icons/yu_icon-" + (menu.shrimp ? 26 : 29) + ".png";
 			break;
 		default:
 			return;
 	}
 
 	SUBSTITUTE_ICON.src =
-		menu.substitute === false
-			? "image/detail/icons/yu_icon-17.png"
-			: "image/detail/icons/yu_icon-14.png";
-	console.log();
+		"image/detail/icons/yu_icon-" +
+		(menu.substitute === false ? 17 : 14) +
+		".png";
 }
 function hideModal() {
 	DIV.classList.add(HIDE_CLASS);
@@ -64,7 +67,7 @@ DIV.querySelector(".hide-button").addEventListener("click", hideModal);
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //モーダルの外をクリックした場合にも消したいなら、以下のコメントを外す
-
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // document.addEventListener("click", (event) => {
 // 	if (isIgnoreNext) {
 // 		isIgnoreNext = false;
