@@ -42,7 +42,7 @@ function showModal(category, menu) {
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
 			OPTION_ICON.src = "image/detail/icons/yu_icon-30.png";
 			break;
-		case "vegitable-list":
+		case "vegetable-list":
 			DIV.classList.add(VEGI_COLOR_CLASS);
 			OPTION_ICON.src = "image/detail/icons/yu_icon-26.png";
 			break;

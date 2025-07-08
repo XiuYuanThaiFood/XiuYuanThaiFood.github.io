@@ -25,6 +25,7 @@ body {
 
 .menu img {
     width: 450px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
@@ -137,4 +138,41 @@ body {
     height: auto;
     position: absolute;
     bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .rice-noodle,
+    .vegetable-delights,
+    .juice-drink {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 2em;
+    }
+
+    .menu h2::before {
+        width: 50px;
+    }
+
+    .menu img {
+        width: 100vw;
+        height: auto;
+     }
+
+     .menu-detail {
+        width: auto;
+        height: auto;
+        align-items: center;
+     }
+
+    .text h3 {
+        text-align: center;
+    }
+
+    .text p {
+        padding: 0px 10px;
+    }
+
+    .button {
+        margin-bottom: 2em;
+    }
 }
