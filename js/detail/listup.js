@@ -129,7 +129,7 @@ const IMG_SIZE = "250";
 const ICON_SIZE = "40";
 const RICE_DIV_ID = "rice-list";
 const NOODLE_DIV_ID = "noodle-list";
-const VEGETABLE_DIV_ID = "vegitable-list";
+const VEGETABLE_DIV_ID = "vegetable-list";
 const DRINK_DIV_ID = "drinks-list";
 const NO_CHILLI_IMG_PATH = "/image/detail/icons/yu_icon-35.png";
 const NO_SHRIMP_IMG_PATH = "/image/detail/icons/yu_icon-27.png";
@@ -150,7 +150,7 @@ function makePanel(ID, array) {
 		const img = document.createElement("img");
 		img.src = menu.imgPath;
 		img.width = IMG_SIZE;
-		img.height = IMG_SIZE;
+		// img.height = IMG_SIZE;
 		containerDiv.appendChild(img);
 		panelDiv.appendChild(containerDiv);
 

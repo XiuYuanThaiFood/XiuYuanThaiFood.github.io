@@ -260,8 +260,13 @@ hr {
 	width: fit-content
 }
 
-
-
+.with-description > img,
+.rice-and-noodle .sub-custimize-block .head > img,
+.typical-menu--name > img {
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+}
 
 .please-note {
 	color: var(--main-color);
@@ -288,7 +293,6 @@ hr {
 	justify-content: center;
 	gap: 4rem 2rem;
 	margin: 0 5rem;
-
 	min-height: calc(381px + 1rem);
 }
 
@@ -298,7 +302,6 @@ hr {
 	box-sizing: border-box;
 	text-align: left;
 	aspect-ratio: 7/8;
-
 	box-shadow: #0005 4px 3px 3px;
 }
 
@@ -336,8 +339,6 @@ hr {
 	transform: none;
 	cursor: default;
 }
-
-
 
 .menu--main-info {
 	position: relative;
@@ -381,11 +382,11 @@ hr {
 	padding: 2rem;
 }
 
-
 .teptip img {
 	position: absolute;
 	top: 0;
 	right: 5%;
+	width: 400px;
 	height: auto;
 	transform: rotate(-15deg);
 	margin: 2rem auto;
@@ -456,7 +457,6 @@ svg {
 	border: var(--main-color) 3px solid;
 	border-radius: 16px;
 	box-sizing: border-box;
-
 }
 
 .modal p {
@@ -476,7 +476,6 @@ svg {
 	top: 5%;
 	max-width: 50%;
 	font-size: 1.8rem;
-
 	font-weight: bold;
 }
 
@@ -498,8 +497,6 @@ svg {
 	max-height: 20%;
 	padding-right: 2rem;
 	width: 50%;
-
-
 }
 
 .ingredients {
@@ -517,7 +514,6 @@ svg {
 	width: 10%;
 	height: auto;
 	aspect-ratio: auto;
-
 }
 
 .key-ingredients {
@@ -528,10 +524,7 @@ svg {
 
 .ingredients-field {
 	width: 60%;
-
-
 }
-
 
 .modal-img-container {
 	position: absolute;
@@ -547,7 +540,6 @@ svg {
 	width: stretch;
 	object-position: center;
 	aspect-ratio: auto;
-
 }
 
 .modal-custom-icon {
@@ -622,7 +614,6 @@ svg {
 		align-self: center;
 		width: 70%;
 		height: auto;
-
 	}
 
 	.juices-and-drinks>p {

@@ -33,7 +33,6 @@ body {
 .about-box {
     display: flex;
     justify-content: center;
-    height: 400px;
     align-items: center;
     width: 90%;
 }
@@ -52,6 +51,7 @@ body {
 
 .about-logo img {
     width: 320px;
+    height: auto;
 }
 
 .about-text {
