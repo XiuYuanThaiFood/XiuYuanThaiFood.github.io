@@ -23,13 +23,13 @@ img[alt] {
 
 body {
 	background-color: white;
-	max-width: 1280px;
 	width: stretch;
 	margin: auto;
 }
 
 main {
 	background-color: #EDE8DF;
+	padding: 0 calc((100% - 1280px) / 2);
 }
 
 .rice-and-noodle {
@@ -54,9 +54,8 @@ main {
 }
 
 .category-section {
-
 	box-sizing: border-box;
-	margin: 2rem 0;
+	padding: 2rem 0;
 }
 
 main .category-section:first-child {
@@ -321,8 +320,6 @@ hr {
 
 :not(.juices-and-drinks) .menu-panel {
 	transition: 0.3s;
-
-
 }
 
 :not(.juices-and-drinks) .menu-panel:hover {
