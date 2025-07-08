@@ -199,7 +199,11 @@ body {
 }
 
 .contact-info {
-    margin: 35px;
+    margin: 20px;
+}
+
+.contact-info-icons {
+    padding-top: 16px;
 }
 
 .map iframe {

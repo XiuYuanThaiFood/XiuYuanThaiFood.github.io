@@ -25,6 +25,7 @@ body {
 
 .menu img {
     width: 450px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
     border: 1px solid #d6ac80;

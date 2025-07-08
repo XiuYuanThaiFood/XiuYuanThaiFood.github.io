@@ -352,6 +352,10 @@ h2::before {
         text-align: left;
     }
 
+    .introduction span {
+        white-space: nowrap;
+    }
+
     .back-to-top {
         position: sticky;
         bottom: 20px;
