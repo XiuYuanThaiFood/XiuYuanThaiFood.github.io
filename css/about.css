@@ -33,7 +33,6 @@ body {
 .about-box {
     display: flex;
     justify-content: center;
-    height: 400px;
     align-items: center;
     width: 90%;
 }
@@ -52,6 +51,7 @@ body {
 
 .about-logo img {
     width: 320px;
+    height: auto;
 }
 
 .about-text {
@@ -159,4 +159,63 @@ body {
     height: auto;
     position: absolute;
     bottom: 10px;
+}
+
+@media screen and (max-width: 1060px) {
+    .about-slogan {
+        justify-content: center;
+        width: auto;
+        margin: 0;
+    }
+    .about-slogan p {
+        text-indent: 0px;
+    }
+
+    .about-box {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding-bottom: 50px;
+    }
+
+    .section-title::before {
+        width: 50px;
+    }
+
+    .about-box,
+    .contact-info {
+        padding: 0 10px;
+    }
+
+    .about-text {
+        width: auto;
+        padding-left: 0;
+    }
+
+    .about-box {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-detail p {
+        width: auto;
+    }
+
+    .about-logo {
+        width: 300px;
+        height: 240px;
+        margin-left: 0;
+    }
+
+    .about-logo img {
+        width: 270px;
+    }
+
+    .map iframe {
+        width: 100vw;
+        height: 300px;
+    }
 }
