@@ -26,7 +26,7 @@ function showModal(category, menu) {
 	TITLE.innerHTML = menu.name;
 	PRICE.innerHTML = menu.price;
 	IMG.src = menu.imgPath;
-
+	IMG.alt = "picture of " + menu.name;
 	/*TBR
 	listup.jsに直接追加してもらうか、配列を作った後変更してほしいです
 	*/

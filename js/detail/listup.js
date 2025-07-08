@@ -180,6 +180,7 @@ function makePanel(ID, array) {
 		img.src = menu.imgPath;
 		img.width = IMG_SIZE;
 		img.height = IMG_SIZE;
+		img.alt = "picture of " + menu.name;
 		containerDiv.appendChild(img);
 		panelDiv.appendChild(containerDiv);
 
