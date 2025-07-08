@@ -1,6 +1,6 @@
 const HIDE_CLASS = "hide-modal";
 const RICE_AND_NOODLE_COLOR_CLASS = "rice-and-noodle";
-const VEGI_COLOR_CLASS = "vegetable-delights";
+const VEGE_COLOR_CLASS = "vegetable-delights";
 const MODAL_ID = "#modal";
 const DIV = document.querySelector(MODAL_ID);
 const TEXT_DIV = DIV.querySelector(".modal-contents");
@@ -19,7 +19,7 @@ function showModal(category, menu) {
 	DIV.classList.remove(
 		HIDE_CLASS,
 		RICE_AND_NOODLE_COLOR_CLASS,
-		VEGI_COLOR_CLASS
+		VEGE_COLOR_CLASS
 	);
 	isIgnoreNext = true;
 
@@ -45,8 +45,8 @@ function showModal(category, menu) {
 			DIV.classList.add(RICE_AND_NOODLE_COLOR_CLASS);
 			OPTION_ICON.src = "image/detail/icons/yu_icon-30.png";
 			break;
-		case "vegitable-list":
-			DIV.classList.add(VEGI_COLOR_CLASS);
+		case "vegetable-list":
+			DIV.classList.add(VEGE_COLOR_CLASS);
 			OPTION_ICON.src = "image/detail/icons/yu_icon-26.png";
 			break;
 		default:

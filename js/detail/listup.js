@@ -146,7 +146,7 @@ const IMG_SIZE = "250";
 const ICON_SIZE = "40";
 const RICE_DIV_ID = "rice-list";
 const NOODLE_DIV_ID = "noodle-list";
-const VEGETABLE_DIV_ID = "vegitable-list";
+const VEGETABLE_DIV_ID = "vegetable-list";
 const DRINK_DIV_ID = "drinks-list";
 const NO_CHILLI_IMG_PATH = "/image/detail/icons/yu_icon-35.png";
 const NO_SHRIMP_IMG_PATH = "/image/detail/icons/yu_icon-27.png";
@@ -155,12 +155,18 @@ const SHRIMP_IMG_PATH = "/image/detail/icons/yu_icon-28.png";
 //直接モードレスウィンドウを開く際の処理。
 const hash = location.hash;
 const directOpenId = hash.slice(1);
-let directOpenModalMenu;
-
+let directShowMenu = null;
+let directShowCategory = null;
 makePanel(RICE_DIV_ID, RICE_MENU_LIST);
 makePanel(NOODLE_DIV_ID, NOODLE_MENU_LIST);
 makePanel(VEGETABLE_DIV_ID, VEGETABLE_MENU_LIST);
 makePanel(DRINK_DIV_ID, DRINK_MENU_LIST);
+
+if (directShowMenu != null) {
+	showModal(directShowCategory, directShowMenu);
+} else {
+	closeModal();
+}
 
 function makePanel(ID, array) {
 	array.forEach((menu, index) => {
@@ -221,7 +227,8 @@ function makePanel(ID, array) {
 		}
 		document.getElementById(ID).appendChild(panelDiv);
 		if (directOpenId.length !== 0 && directOpenId === menu.id) {
-			showModal(ID, menu);
+			directShowMenu = menu;
+			directShowCategory = ID;
 		}
 	});
 }
