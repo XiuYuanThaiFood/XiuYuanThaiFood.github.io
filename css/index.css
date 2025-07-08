@@ -340,8 +340,8 @@ h2::before {
     }
 
     .menu-name {
-        letter-spacing: 0;
-        font-size: 26px;
+        letter-spacing: -2px;
+        font-size: 27px;
     }
 
     .menu-name img {
