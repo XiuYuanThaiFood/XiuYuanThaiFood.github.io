@@ -207,7 +207,6 @@ h2::before {
     text-align: left;
 }
 
-/*左右按鈕
 .swiper-button-next::after,
 .swiper-button-prev::after {
     display: none;
@@ -222,10 +221,10 @@ h2::before {
 }
 
 .swiper-button-prev {
-    left: -50px;
+    left: -50px !important;
 }
 .swiper-button-next {
-    right: -50px;
+    right: -50px !important;
 }
 
 .swiper-button-prev img {
@@ -235,7 +234,15 @@ h2::before {
 .swiper-button-next img {
      width: 40px;
 }
-*/
+
+.swiper-pagination {
+    bottom: -40px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+}
 
 /* backtop */
 .back-to-top {
@@ -353,5 +360,10 @@ h2::before {
 
     .swiper-slide p:nth-child(2) {
         height: 4em;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
     }
 }
