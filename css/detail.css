@@ -282,12 +282,7 @@ hr {
 	grid-template-columns: repeat(auto-fill, calc(1280px*0.25));
 	justify-content: center;
 	gap: 4rem 2rem;
-<<<<<<< HEAD
-	margin: 0 min(5rem, 7%);
-
-=======
 	margin: 0 5rem;
->>>>>>> main
 	min-height: calc(381px + 1rem);
 }
 
