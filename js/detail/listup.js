@@ -165,7 +165,7 @@ makePanel(DRINK_DIV_ID, DRINK_MENU_LIST);
 if (directShowMenu != null) {
 	showModal(directShowCategory, directShowMenu);
 } else {
-	closeModal();
+	hideModal();
 }
 
 function makePanel(ID, array) {

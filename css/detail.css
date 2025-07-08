@@ -8,12 +8,8 @@
 	--typical-color: #F8A300;
 	--main-color: #000;
 	/*上書きあり*/
-
 	font-size: 16px;
-
-
 }
-
 
 img[alt] {
 	color: gray !important;
@@ -23,13 +19,13 @@ img[alt] {
 
 body {
 	background-color: white;
-	max-width: 1280px;
 	width: stretch;
 	margin: auto;
 }
 
 main {
 	background-color: #EDE8DF;
+	padding: 0 calc((100% - 1280px) / 2);
 }
 
 .rice-and-noodle {
@@ -54,9 +50,8 @@ main {
 }
 
 .category-section {
-
 	box-sizing: border-box;
-	margin: 2rem 0;
+	padding: 2rem 0;
 }
 
 main .category-section:first-child {
@@ -68,7 +63,6 @@ main .category-section:first-child {
 	padding: 1rem 0;
 	font-weight: normal;
 	color: var(--main-color);
-
 }
 
 .category-section>h2::before {
@@ -78,7 +72,6 @@ main .category-section:first-child {
 .category {
 	font-size: 2rem;
 	font-weight: bold;
-
 }
 
 hr {
@@ -143,7 +136,6 @@ hr {
 	margin: 0;
 }
 
-
 .customize-option :not(:is(.description, .please-note)) {
 	font-weight: bold;
 	color: var(--main-color);
@@ -184,7 +176,6 @@ hr {
 	align-items: center;
 	font-size: 1.3rem;
 	align-items: flex-start;
-
 }
 
 .customize-option .head .choice-meat {
@@ -200,7 +191,6 @@ hr {
 .customize-option .description {
 	color: var(--main-color);
 	font-weight: normal;
-
 }
 
 .category-typical-menu {
@@ -247,12 +237,10 @@ hr {
 
 .typical-menu--description {
 	color: var(--basic-text);
-
 }
 
 .typical-menu--price {
 	text-align: left;
-
 }
 
 .with-description {
@@ -269,8 +257,6 @@ hr {
 	height: 50px;
 	object-fit: contain;
 }
-
-
 
 .please-note {
 	color: var(--main-color);
@@ -296,8 +282,12 @@ hr {
 	grid-template-columns: repeat(auto-fill, calc(1280px*0.25));
 	justify-content: center;
 	gap: 4rem 2rem;
+<<<<<<< HEAD
 	margin: 0 min(5rem, 7%);
 
+=======
+	margin: 0 5rem;
+>>>>>>> main
 	min-height: calc(381px + 1rem);
 }
 
@@ -307,7 +297,6 @@ hr {
 	box-sizing: border-box;
 	text-align: left;
 	aspect-ratio: 7/8;
-
 	box-shadow: #0005 4px 3px 3px;
 }
 
@@ -347,8 +336,6 @@ hr {
 	transform: none;
 	cursor: default;
 }
-
-
 
 .menu--main-info {
 	position: relative;
@@ -391,7 +378,6 @@ hr {
 	margin-top: 4rem;
 	padding: 2rem;
 }
-
 
 .teptip img {
 	position: absolute;
@@ -468,7 +454,6 @@ svg {
 	border: var(--main-color) 3px solid;
 	border-radius: 16px;
 	box-sizing: border-box;
-
 }
 
 .modal p {
@@ -488,7 +473,6 @@ svg {
 	top: 5%;
 	max-width: 50%;
 	font-size: 1.8rem;
-
 	font-weight: bold;
 }
 
@@ -511,8 +495,6 @@ svg {
 	max-height: 20%;
 	padding-right: 2rem;
 	width: 50%;
-
-
 }
 
 .ingredients {
@@ -530,7 +512,6 @@ svg {
 	width: 10%;
 	height: auto;
 	aspect-ratio: auto;
-
 }
 
 .key-ingredients {
@@ -541,10 +522,7 @@ svg {
 
 .ingredients-field {
 	width: 60%;
-
-
 }
-
 
 .modal-img-container {
 	position: absolute;
@@ -560,7 +538,6 @@ svg {
 	width: stretch;
 	object-position: center;
 	aspect-ratio: auto;
-
 }
 
 .modal-custom-icon {
@@ -656,7 +633,6 @@ svg {
 		align-self: center;
 		width: 70%;
 		height: auto;
-
 	}
 
 	.juices-and-drinks>p {
